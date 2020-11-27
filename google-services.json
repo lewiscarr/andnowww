@@ -1,44 +1,42 @@
 {
   "project_info": {
-    "project_number": "826955551625",
-    "firebase_url": "https://niu-moodle.firebaseio.com",
-    "project_id": "niu-moodle",
-    "storage_bucket": "niu-moodle.appspot.com"
+    "project_number": "",
+    "firebase_url": "",
+    "project_id": "",
+    "storage_bucket": ""
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:826955551625:android:5a4fed369d22bcbef28758",
+        "mobilesdk_app_id": "1:111111111111:android:1111111111111111",
         "android_client_info": {
-          "package_name": "com.tituslearning.niuqlearn"
+          "package_name": "com.moodle.moodlemobile"
         }
       },
       "oauth_client": [
         {
-          "client_id": "826955551625-274p26r69lb990ccb6lbmv8kctb5ukpk.apps.googleusercontent.com",
+          "client_id": "",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCBWR5515HzGO2c_6hqwwupli2MSFMnupk"
+          "current_key": ""
+        },
+        {
+          "current_key": ""
         }
       ],
       "services": {
+        "analytics_service": {
+          "status": 1
+        },
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "826955551625-274p26r69lb990ccb6lbmv8kctb5ukpk.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "826955551625-63i2m889ljefjj7af6hb8gctllhrp31f.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.tituslearning.niuqlearn"
-              }
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
         }
       }
     }
