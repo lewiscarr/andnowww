@@ -219,6 +219,9 @@
                 <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
             </feature>
         </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
+        </config-file>
     </platform>
     <platform name="ios">
         <resource-file src="GoogleService-Info.plist" />
@@ -241,7 +244,7 @@
             <true />
         </edit-config>
         <edit-config file="*-Info.plist" mode="merge" target="CFBundleShortVersionString">
-            <string>3.9.3-dev</string>
+            <string>3.9.3</string>
         </edit-config>
         <config-file parent="FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED" target="*-Info.plist">
             <string>YES</string>
