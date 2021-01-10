@@ -1,6 +1,6 @@
 webpackJsonp([62],{
 
-/***/ 2228:
+/***/ 2088:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,9 +8,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCommentsAddPageModule", function() { return CoreCommentsAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add__ = __webpack_require__(2389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add__ = __webpack_require__(2249);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -57,7 +57,7 @@ var CoreCommentsAddPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2389:
+/***/ 2249:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68,7 +68,7 @@ var CoreCommentsAddPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_comments__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_comments__ = __webpack_require__(122);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -157,7 +157,7 @@ var CoreCommentsAddPage = /** @class */ (function () {
     ], CoreCommentsAddPage.prototype, "formElement", void 0);
     CoreCommentsAddPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-comments-add',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/comments/pages/add/add.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.comments.addcomment\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <form name="itemEdit" (ngSubmit)="addComment($event)" #commentForm>\n        <ion-item>\n            <ion-textarea placeholder="{{ \'core.comments.addcomment\' | translate }}" rows="5" [(ngModel)]="content" name="content" required="required"></ion-textarea>\n        </ion-item>\n        <div padding>\n            <button ion-button block type="submit" [disabled]="processing || content.length < 1">\n                {{ \'core.comments.savecomment\' | translate }}\n            </button>\n        </div>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/comments/pages/add/add.html"*/,
+            selector: 'page-core-comments-add',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/comments/pages/add/add.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.comments.addcomment\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <form name="itemEdit" (ngSubmit)="addComment($event)" #commentForm>\n        <ion-item>\n            <ion-textarea placeholder="{{ \'core.comments.addcomment\' | translate }}" rows="5" [(ngModel)]="content" name="content" required="required"></ion-textarea>\n        </ion-item>\n        <div padding>\n            <button ion-button block type="submit" [disabled]="processing || content.length < 1">\n                {{ \'core.comments.savecomment\' | translate }}\n            </button>\n        </div>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/comments/pages/add/add.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */],

@@ -1,6 +1,6 @@
 webpackJsonp([25],{
 
-/***/ 2266:
+/***/ 2127:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,10 +9,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__space_usage__ = __webpack_require__(2426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__space_usage__ = __webpack_require__(2287);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(66);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ var CoreSettingsSpaceUsagePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2426:
+/***/ 2287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72,7 +72,7 @@ var CoreSettingsSpaceUsagePageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(1073);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(1003);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -240,7 +240,7 @@ var CoreSettingsSpaceUsagePage = /** @class */ (function () {
     };
     CoreSettingsSpaceUsagePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-settings-space-usage',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/settings/pages/space-usage/space-usage.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.settings.spaceusage\' | translate }}</ion-title>\n        <ion-buttons end>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-navbar-buttons>\n    <button ion-button icon-only (click)="showInfo()" [attr.aria-label]="\'core.info\' | translate">\n        <ion-icon name="information-circle"></ion-icon>\n    </button>\n</core-navbar-buttons>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <ion-item *ngFor="let site of sites" [class.core-primary-selected-item]="site.id == currentSiteId">\n            <h2 text-wrap><core-format-text [text]="site.siteName" clean="true" [siteId]="site.id"></core-format-text></h2>\n            <p text-wrap>{{ site.fullName }}</p>\n            <div item-end>\n                <p *ngIf="site.spaceUsage != null" text-end>{{ site.spaceUsage | coreBytesToSize }}</p>\n            </div>\n            <button ion-button icon-only clear color="danger" item-end (click)="deleteSiteStorage(site)" [hidden]="!site.spaceUsage > \'0\' && !site.cacheEntries > \'0\'" [attr.aria-label]="\'core.settings.deletesitefilestitle\' | translate">\n                <ion-icon name="trash"></ion-icon>\n            </button>\n        </ion-item>\n        <ion-item-divider *ngIf="totals">\n            <h2>{{ \'core.settings.total\' | translate }}</h2>\n            <div item-end>\n                <p>{{ totals.spaceUsage | coreBytesToSize }}</p>\n            </div>\n        </ion-item-divider>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/settings/pages/space-usage/space-usage.html"*/,
+            selector: 'page-core-settings-space-usage',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/settings/pages/space-usage/space-usage.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.settings.spaceusage\' | translate }}</ion-title>\n        <ion-buttons end>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-navbar-buttons>\n    <button ion-button icon-only (click)="showInfo()" [attr.aria-label]="\'core.info\' | translate">\n        <ion-icon name="information-circle"></ion-icon>\n    </button>\n</core-navbar-buttons>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <ion-item *ngFor="let site of sites" [class.core-primary-selected-item]="site.id == currentSiteId">\n            <h2 text-wrap><core-format-text [text]="site.siteName" clean="true" [siteId]="site.id"></core-format-text></h2>\n            <p text-wrap>{{ site.fullName }}</p>\n            <div item-end>\n                <p *ngIf="site.spaceUsage != null" text-end>{{ site.spaceUsage | coreBytesToSize }}</p>\n            </div>\n            <button ion-button icon-only clear color="danger" item-end (click)="deleteSiteStorage(site)" [hidden]="!site.spaceUsage > \'0\' && !site.cacheEntries > \'0\'" [attr.aria-label]="\'core.settings.deletesitefilestitle\' | translate">\n                <ion-icon name="trash"></ion-icon>\n            </button>\n        </ion-item>\n        <ion-item-divider *ngIf="totals">\n            <h2>{{ \'core.settings.total\' | translate }}</h2>\n            <div item-end>\n                <p>{{ totals.spaceUsage | coreBytesToSize }}</p>\n            </div>\n        </ion-item-divider>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/settings/pages/space-usage/space-usage.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_sites__["b" /* CoreSitesProvider */],
             __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* CoreSettingsHelper */],

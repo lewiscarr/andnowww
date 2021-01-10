@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 2209:
+/***/ 2070:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,8 +10,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__player__ = __webpack_require__(2366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__player__ = __webpack_require__(2227);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,7 +60,7 @@ var AddonModScormPlayerPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2366:
+/***/ 2227:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69,14 +69,14 @@ var AddonModScormPlayerPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sync__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sync__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_time__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_ion_tabs_ion_tabs__ = __webpack_require__(485);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_scorm__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(510);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_scorm_sync__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__classes_data_model_12__ = __webpack_require__(2367);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_time__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_ion_tabs_ion_tabs__ = __webpack_require__(438);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_scorm__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_scorm_sync__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__classes_data_model_12__ = __webpack_require__(2228);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -523,7 +523,7 @@ var AddonModScormPlayerPage = /** @class */ (function () {
     };
     AddonModScormPlayerPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-scorm-player',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/scorm/pages/player/player.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="title" contextLevel="module" [contextInstanceId]="scorm.coursemodule" [courseId]="scorm.course"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="showToc && !loadingToc && toc && toc.length" ion-button icon-only (click)="openToc($event)"[attr.aria-label]="\'addon.mod_scorm.toc\' | translate" aria-haspopup="true">\n                <ion-icon name="bookmark"></ion-icon>\n            </button>\n            <ion-spinner *ngIf="showToc && loadingToc"></ion-spinner>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <core-navigation-bar [previous]="previousSco" [next]="nextSco" (action)="loadSco($event)"></core-navigation-bar>\n        <core-iframe *ngIf="loaded && src" [src]="src" [iframeWidth]="scormWidth" [iframeHeight]="scormHeight"></core-iframe>\n        <p *ngIf="!src && errorMessage">{{ errorMessage | translate }}</p>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/scorm/pages/player/player.html"*/,
+            selector: 'page-addon-mod-scorm-player',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/scorm/pages/player/player.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="title" contextLevel="module" [contextInstanceId]="scorm.coursemodule" [courseId]="scorm.course"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="showToc && !loadingToc && toc && toc.length" ion-button icon-only (click)="openToc($event)"[attr.aria-label]="\'addon.mod_scorm.toc\' | translate" aria-haspopup="true">\n                <ion-icon name="bookmark"></ion-icon>\n            </button>\n            <ion-spinner *ngIf="showToc && loadingToc"></ion-spinner>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <core-navigation-bar [previous]="previousSco" [next]="nextSco" (action)="loadSco($event)"></core-navigation-bar>\n        <core-iframe *ngIf="loaded && src" [src]="src" [iframeWidth]="scormWidth" [iframeHeight]="scormHeight"></core-iframe>\n        <p *ngIf="!src && errorMessage">{{ errorMessage | translate }}</p>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/scorm/pages/player/player.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ModalController */],
@@ -543,12 +543,12 @@ var AddonModScormPlayerPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2367:
+/***/ 2228:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModScormDataModel12; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_scorm__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_scorm__ = __webpack_require__(179);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");

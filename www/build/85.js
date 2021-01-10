@@ -1,6 +1,6 @@
 webpackJsonp([85],{
 
-/***/ 2202:
+/***/ 2063:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,8 +10,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__attempt__ = __webpack_require__(2358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__attempt__ = __webpack_require__(2219);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,7 +60,7 @@ var AddonModQuizAttemptPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2358:
+/***/ 2219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68,8 +68,8 @@ var AddonModQuizAttemptPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_quiz__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_quiz__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(194);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -234,7 +234,7 @@ var AddonModQuizAttemptPage = /** @class */ (function () {
     };
     AddonModQuizAttemptPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-quiz-attempt',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/quiz/pages/attempt/attempt.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text *ngIf="quiz" [text]="quiz.name" contextLevel="module" [contextInstanceId]="quiz.coursemodule" [courseId]="courseId"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <ion-list *ngIf="attempt">\n            <ion-item text-wrap no-lines>\n                <h2>{{ \'addon.mod_quiz.attemptnumber\' | translate }}</h2>\n                <p *ngIf="attempt.preview">{{ \'addon.mod_quiz.preview\' | translate }}</p>\n                <p *ngIf="!attempt.preview">{{ attempt.attempt }}</p>\n            </ion-item>\n            <ion-item text-wrap no-lines>\n                <h2>{{ \'addon.mod_quiz.attemptstate\' | translate }}</h2>\n                <p *ngFor="let sentence of attempt.readableState">{{ sentence }}</p>\n            </ion-item>\n            <ion-item text-wrap no-lines *ngIf="quiz.showMarkColumn && attempt.readableMark !== \'\'">\n                <h2>{{ \'addon.mod_quiz.marks\' | translate }} / {{ quiz.sumGradesFormatted }}</h2>\n                <p>{{ attempt.readableMark }}</p>\n            </ion-item>\n            <ion-item text-wrap no-lines *ngIf="quiz.showGradeColumn && attempt.readableGrade !== \'\'">\n                <h2>{{ \'addon.mod_quiz.grade\' | translate }} / {{ quiz.gradeFormatted }}</h2>\n                <p>{{ attempt.readableGrade }}</p>\n            </ion-item>\n            <ion-item text-wrap no-lines *ngIf="quiz.showFeedbackColumn && attempt.feedback">\n                <h2>{{ \'addon.mod_quiz.feedback\' | translate }}</h2>\n                <p><core-format-text [component]="component" [componentId]="componentId" [text]="attempt.feedback" contextLevel="module" [contextInstanceId]="quiz.coursemodule" [courseId]="courseId"></core-format-text></p>\n            </ion-item>\n            <ion-item *ngIf="quiz.showReviewColumn && attempt.finished">\n                <button ion-button block icon-start navPush="AddonModQuizReviewPage" [navParams]="{courseId: courseId, quizId: quiz.id, attemptId: attempt.id}">\n                    <ion-icon name="search"></ion-icon>\n                    {{ \'addon.mod_quiz.review\' | translate }}\n                </button>\n            </ion-item>\n            <ion-item text-wrap class="core-danger-item" *ngIf="!quiz.showReviewColumn">\n                <p>{{ \'addon.mod_quiz.noreviewattempt\' | translate }}</p>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/quiz/pages/attempt/attempt.html"*/,
+            selector: 'page-addon-mod-quiz-attempt',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/quiz/pages/attempt/attempt.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text *ngIf="quiz" [text]="quiz.name" contextLevel="module" [contextInstanceId]="quiz.coursemodule" [courseId]="courseId"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <ion-list *ngIf="attempt">\n            <ion-item text-wrap no-lines>\n                <h2>{{ \'addon.mod_quiz.attemptnumber\' | translate }}</h2>\n                <p *ngIf="attempt.preview">{{ \'addon.mod_quiz.preview\' | translate }}</p>\n                <p *ngIf="!attempt.preview">{{ attempt.attempt }}</p>\n            </ion-item>\n            <ion-item text-wrap no-lines>\n                <h2>{{ \'addon.mod_quiz.attemptstate\' | translate }}</h2>\n                <p *ngFor="let sentence of attempt.readableState">{{ sentence }}</p>\n            </ion-item>\n            <ion-item text-wrap no-lines *ngIf="quiz.showMarkColumn && attempt.readableMark !== \'\'">\n                <h2>{{ \'addon.mod_quiz.marks\' | translate }} / {{ quiz.sumGradesFormatted }}</h2>\n                <p>{{ attempt.readableMark }}</p>\n            </ion-item>\n            <ion-item text-wrap no-lines *ngIf="quiz.showGradeColumn && attempt.readableGrade !== \'\'">\n                <h2>{{ \'addon.mod_quiz.grade\' | translate }} / {{ quiz.gradeFormatted }}</h2>\n                <p>{{ attempt.readableGrade }}</p>\n            </ion-item>\n            <ion-item text-wrap no-lines *ngIf="quiz.showFeedbackColumn && attempt.feedback">\n                <h2>{{ \'addon.mod_quiz.feedback\' | translate }}</h2>\n                <p><core-format-text [component]="component" [componentId]="componentId" [text]="attempt.feedback" contextLevel="module" [contextInstanceId]="quiz.coursemodule" [courseId]="courseId"></core-format-text></p>\n            </ion-item>\n            <ion-item *ngIf="quiz.showReviewColumn && attempt.finished">\n                <button ion-button block icon-start navPush="AddonModQuizReviewPage" [navParams]="{courseId: courseId, quizId: quiz.id, attemptId: attempt.id}">\n                    <ion-icon name="search"></ion-icon>\n                    {{ \'addon.mod_quiz.review\' | translate }}\n                </button>\n            </ion-item>\n            <ion-item text-wrap class="core-danger-item" *ngIf="!quiz.showReviewColumn">\n                <p>{{ \'addon.mod_quiz.noreviewattempt\' | translate }}</p>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/quiz/pages/attempt/attempt.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__["b" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_quiz__["a" /* AddonModQuizProvider */],
             __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* AddonModQuizHelperProvider */]])

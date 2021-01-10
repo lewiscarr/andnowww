@@ -1,6 +1,6 @@
 webpackJsonp([148],{
 
-/***/ 2134:
+/***/ 1994:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,9 +10,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_badges__ = __webpack_require__(2290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_badges__ = __webpack_require__(2150);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,18 +63,18 @@ var AddonBadgesUserBadgesPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2290:
+/***/ 2150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonBadgesUserBadgesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_badges__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_badges__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__ = __webpack_require__(81);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -178,7 +178,7 @@ var AddonBadgesUserBadgesPage = /** @class */ (function () {
     ], AddonBadgesUserBadgesPage.prototype, "splitviewCtrl", void 0);
     AddonBadgesUserBadgesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-badges-user-badges',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/badges/pages/user-badges/user-badges.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.badges.badges\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="badgesLoaded" (ionRefresh)="refreshBadges($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="badgesLoaded">\n            <core-empty-box *ngIf="!badges || badges.length == 0" icon="trophy" [message]="\'addon.badges.nobadges\' | translate">\n            </core-empty-box>\n\n            <ion-list *ngIf="badges && badges.length" no-margin>\n                <a ion-item text-wrap *ngFor="let badge of badges" [title]="badge.name" (click)="loadIssuedBadge(badge.uniquehash)" [class.core-split-item-selected]="badge.uniquehash == badgeHash">\n                    <ion-avatar item-start>\n                        <img [src]="badge.badgeurl" [alt]="badge.name" item-start core-external-content>\n                    </ion-avatar>\n                    <h2>{{ badge.name }}</h2>\n                    <p>{{ badge.dateissued * 1000 | coreFormatDate :\'strftimedatetimeshort\' }}</p>\n                    <ion-badge item-end color="danger" *ngIf="badge.dateexpire && currentTime >= badge.dateexpire">\n                        {{ \'addon.badges.expired\' | translate }}\n                    </ion-badge>\n                </a>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/badges/pages/user-badges/user-badges.html"*/,
+            selector: 'page-addon-badges-user-badges',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/badges/pages/user-badges/user-badges.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.badges.badges\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="badgesLoaded" (ionRefresh)="refreshBadges($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="badgesLoaded">\n            <core-empty-box *ngIf="!badges || badges.length == 0" icon="trophy" [message]="\'addon.badges.nobadges\' | translate">\n            </core-empty-box>\n\n            <ion-list *ngIf="badges && badges.length" no-margin>\n                <a ion-item text-wrap *ngFor="let badge of badges" [title]="badge.name" (click)="loadIssuedBadge(badge.uniquehash)" [class.core-split-item-selected]="badge.uniquehash == badgeHash">\n                    <ion-avatar item-start>\n                        <img [src]="badge.badgeurl" [alt]="badge.name" item-start core-external-content>\n                    </ion-avatar>\n                    <h2>{{ badge.name }}</h2>\n                    <p>{{ badge.dateissued * 1000 | coreFormatDate :\'strftimedatetimeshort\' }}</p>\n                    <ion-badge item-end color="danger" *ngIf="badge.dateexpire && currentTime >= badge.dateexpire">\n                        {{ \'addon.badges.expired\' | translate }}\n                    </ion-badge>\n                </a>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/badges/pages/user-badges/user-badges.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["b" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_badges__["a" /* AddonBadgesProvider */],
             __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["b" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__["b" /* CoreTimeUtilsProvider */]])

@@ -1,6 +1,6 @@
 webpackJsonp([112],{
 
-/***/ 2174:
+/***/ 2033:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,10 +9,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(477);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__search__ = __webpack_require__(2330);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_compile_components_compile_html_compile_html_module__ = __webpack_require__(479);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(430);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__search__ = __webpack_require__(2189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_compile_components_compile_html_compile_html_module__ = __webpack_require__(432);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,23 +63,23 @@ var AddonModDataSearchPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2330:
+/***/ 2189:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModDataSearchPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_utils__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_components_module__ = __webpack_require__(477);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_fields_delegate__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_helper__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_tag_providers_tag__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_components_module__ = __webpack_require__(430);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_fields_delegate__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_helper__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_tag_providers_tag__ = __webpack_require__(131);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -287,7 +287,7 @@ var AddonModDataSearchPage = /** @class */ (function () {
     ], AddonModDataSearchPage.prototype, "formElement", void 0);
     AddonModDataSearchPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-data-search',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/data/pages/search/search.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_data.search\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <div class="fixed-content core-tabs-bar">\n        <a class="tab-slide" [attr.aria-selected]="!search.searchingAdvanced" (click)="changeAdvanced(false)">{{ \'addon.mod_data.search\' | translate}}</a>\n        <a class="tab-slide" [attr.aria-selected]="search.searchingAdvanced" (click)="changeAdvanced(true)">{{ \'addon.mod_data.advancedsearch\' | translate }}</a>\n    </div>\n    <form (ngSubmit)="searchEntries($event)" [formGroup]="searchForm" #searchFormEl>\n        <ion-list no-margin>\n            <ion-item [hidden]="search.searchingAdvanced">\n                <ion-input type="text" placeholder="{{ \'addon.mod_data.search\' | translate}}" [(ngModel)]="search.text" name="text" formControlName="text"></ion-input>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked>{{ \'core.sortby\' | translate }}</ion-label>\n                <ion-select interface="action-sheet" name="sortBy" formControlName="sortBy" [placeholder]="\'core.sortby\' | translate">\n                    <optgroup *ngIf="fieldsArray.length" label="{{ \'addon.mod_data.fields\' | translate }}">\n                        <ion-option *ngFor="let field of fieldsArray" [value]="field.id">{{field.name}}</ion-option>\n                    </optgroup>\n                    <optgroup label="{{ \'addon.mod_data.other\' | translate }}">\n                        <ion-option value="0">{{ \'addon.mod_data.timeadded\' | translate }}</ion-option>\n                        <ion-option value="-4">{{ \'addon.mod_data.timemodified\' | translate }}</ion-option>\n                        <ion-option value="-1">{{ \'addon.mod_data.authorfirstname\' | translate }}</ion-option>\n                        <ion-option value="-2">{{ \'addon.mod_data.authorlastname\' | translate }}</ion-option>\n                        <ion-option value="-3" *ngIf="data.approval">{{ \'addon.mod_data.approved\' | translate }}</ion-option>\n                    </optgroup>\n                </ion-select>\n            </ion-item>\n            <ion-list radio-group [(ngModel)]="search.sortDirection" name="sortDirection" formControlName="sortDirection">\n                <ion-item>\n                    <ion-label>{{ \'addon.mod_data.ascending\' | translate }}</ion-label>\n                    <ion-radio value="ASC"></ion-radio>\n                </ion-item>\n                <ion-item>\n                    <ion-label>{{ \'addon.mod_data.descending\' | translate }}</ion-label>\n                    <ion-radio value="DESC"></ion-radio>\n                </ion-item>\n            </ion-list>\n            <div padding [hidden]="!advancedSearch || !search.searchingAdvanced" class="addon-data-advanced-search">\n                <core-compile-html [text]="advancedSearch" [jsData]="jsData" [extraImports]="extraImports"></core-compile-html>\n            </div>\n        </ion-list>\n        <div padding>\n            <button ion-button block type="submit" icon-start>\n                <ion-icon name="search"></ion-icon>\n                {{ \'addon.mod_data.search\' | translate }}\n            </button>\n        </div>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/data/pages/search/search.html"*/,
+            selector: 'page-addon-mod-data-search',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/data/pages/search/search.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_data.search\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <div class="fixed-content core-tabs-bar">\n        <a class="tab-slide" [attr.aria-selected]="!search.searchingAdvanced" (click)="changeAdvanced(false)">{{ \'addon.mod_data.search\' | translate}}</a>\n        <a class="tab-slide" [attr.aria-selected]="search.searchingAdvanced" (click)="changeAdvanced(true)">{{ \'addon.mod_data.advancedsearch\' | translate }}</a>\n    </div>\n    <form (ngSubmit)="searchEntries($event)" [formGroup]="searchForm" #searchFormEl>\n        <ion-list no-margin>\n            <ion-item [hidden]="search.searchingAdvanced">\n                <ion-input type="text" placeholder="{{ \'addon.mod_data.search\' | translate}}" [(ngModel)]="search.text" name="text" formControlName="text"></ion-input>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked>{{ \'core.sortby\' | translate }}</ion-label>\n                <ion-select interface="action-sheet" name="sortBy" formControlName="sortBy" [placeholder]="\'core.sortby\' | translate">\n                    <optgroup *ngIf="fieldsArray.length" label="{{ \'addon.mod_data.fields\' | translate }}">\n                        <ion-option *ngFor="let field of fieldsArray" [value]="field.id">{{field.name}}</ion-option>\n                    </optgroup>\n                    <optgroup label="{{ \'addon.mod_data.other\' | translate }}">\n                        <ion-option value="0">{{ \'addon.mod_data.timeadded\' | translate }}</ion-option>\n                        <ion-option value="-4">{{ \'addon.mod_data.timemodified\' | translate }}</ion-option>\n                        <ion-option value="-1">{{ \'addon.mod_data.authorfirstname\' | translate }}</ion-option>\n                        <ion-option value="-2">{{ \'addon.mod_data.authorlastname\' | translate }}</ion-option>\n                        <ion-option value="-3" *ngIf="data.approval">{{ \'addon.mod_data.approved\' | translate }}</ion-option>\n                    </optgroup>\n                </ion-select>\n            </ion-item>\n            <ion-list radio-group [(ngModel)]="search.sortDirection" name="sortDirection" formControlName="sortDirection">\n                <ion-item>\n                    <ion-label>{{ \'addon.mod_data.ascending\' | translate }}</ion-label>\n                    <ion-radio value="ASC"></ion-radio>\n                </ion-item>\n                <ion-item>\n                    <ion-label>{{ \'addon.mod_data.descending\' | translate }}</ion-label>\n                    <ion-radio value="DESC"></ion-radio>\n                </ion-item>\n            </ion-list>\n            <div padding [hidden]="!advancedSearch || !search.searchingAdvanced" class="addon-data-advanced-search">\n                <core-compile-html [text]="advancedSearch" [jsData]="jsData" [extraImports]="extraImports"></core-compile-html>\n            </div>\n        </ion-list>\n        <div padding>\n            <button ion-button block type="submit" icon-start>\n                <ion-icon name="search"></ion-icon>\n                {{ \'addon.mod_data.search\' | translate }}\n            </button>\n        </div>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/data/pages/search/search.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */],

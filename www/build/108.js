@@ -1,6 +1,6 @@
 webpackJsonp([108],{
 
-/***/ 2178:
+/***/ 2039:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,10 +9,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(1072);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nonrespondents__ = __webpack_require__(2334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(1002);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nonrespondents__ = __webpack_require__(2195);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,16 +63,16 @@ var AddonModFeedbackNonRespondentsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2334:
+/***/ 2195:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModFeedbackNonRespondentsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_feedback__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_helper__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_groups__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_feedback__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_helper__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_groups__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(7);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
@@ -226,7 +226,7 @@ var AddonModFeedbackNonRespondentsPage = /** @class */ (function () {
     };
     AddonModFeedbackNonRespondentsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-feedback-nonrespondents',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/feedback/pages/nonrespondents/nonrespondents.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_feedback.responses\' |translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="feedbackLoaded" (ionRefresh)="refreshFeedback($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="feedbackLoaded">\n        <ion-list no-margin>\n            <ion-item text-wrap *ngIf="groupInfo.separateGroups || groupInfo.visibleGroups">\n                <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.separateGroups">{{ \'core.groupsseparate\' | translate }}</ion-label>\n                <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.visibleGroups">{{ \'core.groupsvisible\' | translate }}</ion-label>\n                <ion-select [(ngModel)]="selectedGroup" (ionChange)="loadAttempts(selectedGroup)" aria-labelledby="addon-feedback-groupslabel" interface="action-sheet">\n                    <ion-option *ngFor="let groupOpt of groupInfo.groups" [value]="groupOpt.id">{{groupOpt.name}}</ion-option>\n                </ion-select>\n            </ion-item>\n            <ion-item-divider>\n                {{ \'addon.mod_feedback.non_respondents_students\' | translate : {$a: total } }}\n            </ion-item-divider>\n            <ng-container *ngIf="total > 0">\n                <ion-item *ngFor="let user of users" text-wrap>\n                    <ion-avatar core-user-avatar [user]="user" item-start></ion-avatar>\n                    <h2>{{ user.fullname }}</h2>\n                    <p>\n                        <ion-badge color="success" *ngIf="user.started">\n                            {{ \'addon.mod_feedback.started\' | translate}}\n                        </ion-badge>\n                        <ion-badge color="danger" *ngIf="!user.started">\n                            {{ \'addon.mod_feedback.not_started\' | translate}}\n                        </ion-badge>\n                    </p>\n                </ion-item>\n            </ng-container>\n            <ion-item padding text-center *ngIf="canLoadMore">\n                <!-- Button and spinner to show more attempts. -->\n                <button ion-button block *ngIf="!loadingMore" (click)="loadAttempts()">{{ \'core.loadmore\' | translate }}</button>\n                <ion-spinner *ngIf="loadingMore"></ion-spinner>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/feedback/pages/nonrespondents/nonrespondents.html"*/,
+            selector: 'page-addon-mod-feedback-nonrespondents',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/feedback/pages/nonrespondents/nonrespondents.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_feedback.responses\' |translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="feedbackLoaded" (ionRefresh)="refreshFeedback($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="feedbackLoaded">\n        <ion-list no-margin>\n            <ion-item text-wrap *ngIf="groupInfo.separateGroups || groupInfo.visibleGroups">\n                <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.separateGroups">{{ \'core.groupsseparate\' | translate }}</ion-label>\n                <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.visibleGroups">{{ \'core.groupsvisible\' | translate }}</ion-label>\n                <ion-select [(ngModel)]="selectedGroup" (ionChange)="loadAttempts(selectedGroup)" aria-labelledby="addon-feedback-groupslabel" interface="action-sheet">\n                    <ion-option *ngFor="let groupOpt of groupInfo.groups" [value]="groupOpt.id">{{groupOpt.name}}</ion-option>\n                </ion-select>\n            </ion-item>\n            <ion-item-divider>\n                {{ \'addon.mod_feedback.non_respondents_students\' | translate : {$a: total } }}\n            </ion-item-divider>\n            <ng-container *ngIf="total > 0">\n                <ion-item *ngFor="let user of users" text-wrap>\n                    <ion-avatar core-user-avatar [user]="user" item-start></ion-avatar>\n                    <h2>{{ user.fullname }}</h2>\n                    <p>\n                        <ion-badge color="success" *ngIf="user.started">\n                            {{ \'addon.mod_feedback.started\' | translate}}\n                        </ion-badge>\n                        <ion-badge color="danger" *ngIf="!user.started">\n                            {{ \'addon.mod_feedback.not_started\' | translate}}\n                        </ion-badge>\n                    </p>\n                </ion-item>\n            </ng-container>\n            <ion-item padding text-center *ngIf="canLoadMore">\n                <!-- Button and spinner to show more attempts. -->\n                <button ion-button block *ngIf="!loadingMore" (click)="loadAttempts()">{{ \'core.loadmore\' | translate }}</button>\n                <ion-spinner *ngIf="loadingMore"></ion-spinner>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/feedback/pages/nonrespondents/nonrespondents.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_feedback__["a" /* AddonModFeedbackProvider */],
             __WEBPACK_IMPORTED_MODULE_4__providers_groups__["a" /* CoreGroupsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["b" /* CoreDomUtilsProvider */],

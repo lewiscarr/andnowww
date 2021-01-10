@@ -1,6 +1,6 @@
 webpackJsonp([34],{
 
-/***/ 2257:
+/***/ 2118:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,7 +10,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu__ = __webpack_require__(2417);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu__ = __webpack_require__(2278);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -57,7 +57,7 @@ var CoreMainMenuPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2417:
+/***/ 2278:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67,11 +67,11 @@ var CoreMainMenuPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_ion_tabs_ion_tabs__ = __webpack_require__(485);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_mainmenu__ = __webpack_require__(484);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_delegate__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_contentlinks_providers_delegate__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_contentlinks_providers_helper__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_ion_tabs_ion_tabs__ = __webpack_require__(438);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_mainmenu__ = __webpack_require__(437);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_delegate__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_contentlinks_providers_delegate__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_contentlinks_providers_helper__ = __webpack_require__(16);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -289,7 +289,7 @@ var CoreMainMenuPage = /** @class */ (function () {
     ], CoreMainMenuPage.prototype, "mainTabs", void 0);
     CoreMainMenuPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-mainmenu',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/mainmenu/pages/menu/menu.html"*/'<core-ion-tabs #mainTabs [hidden]="!showTabs" [loaded]="loaded" tabsLayout="title-hide" [attr.tabsPlacement]="tabsPlacement">\n    <core-ion-tab [enabled]="false" [show]="false" [root]="redirectPage" [rootParams]="redirectParams"></core-ion-tab>\n    <core-ion-tab *ngFor="let tab of tabs" [root]="tab.page" [rootParams]="tab.pageParams" [tabTitle]="tab.title | translate" [tabIcon]="tab.icon" [tabBadge]="tab.badge" class="{{tab.class}}" [enabled]="!tab.hide" [show]="!tab.hide"></core-ion-tab>\n    <core-ion-tab root="CoreMainMenuMorePage" [tabTitle]="\'core.more\' | translate" tabIcon="menu"></core-ion-tab>\n</core-ion-tabs>\n<div class="core-network-message" [hidden]="!showTabs">\n    <div class="core-online-message">\n        {{ "core.youreonline" | translate }}\n    </div>\n    <div class="core-offline-message">\n        {{ "core.youreoffline" | translate }}\n    </div>\n</div>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/mainmenu/pages/menu/menu.html"*/,
+            selector: 'page-core-mainmenu',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/mainmenu/pages/menu/menu.html"*/'<core-ion-tabs #mainTabs [hidden]="!showTabs" [loaded]="loaded" tabsLayout="title-hide" [attr.tabsPlacement]="tabsPlacement">\n    <core-ion-tab [enabled]="false" [show]="false" [root]="redirectPage" [rootParams]="redirectParams"></core-ion-tab>\n    <core-ion-tab *ngFor="let tab of tabs" [root]="tab.page" [rootParams]="tab.pageParams" [tabTitle]="tab.title | translate" [tabIcon]="tab.icon" [tabBadge]="tab.badge" class="{{tab.class}}" [enabled]="!tab.hide" [show]="!tab.hide"></core-ion-tab>\n    <core-ion-tab root="CoreMainMenuMorePage" [tabTitle]="\'core.more\' | translate" tabIcon="menu"></core-ion-tab>\n</core-ion-tabs>\n<div class="core-network-message" [hidden]="!showTabs">\n    <div class="core-online-message">\n        {{ "core.youreonline" | translate }}\n    </div>\n    <div class="core-offline-message">\n        {{ "core.youreoffline" | translate }}\n    </div>\n</div>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/mainmenu/pages/menu/menu.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__providers_delegate__["a" /* CoreMainMenuDelegate */],
             __WEBPACK_IMPORTED_MODULE_3__providers_sites__["b" /* CoreSitesProvider */],

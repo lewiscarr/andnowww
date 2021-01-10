@@ -1,6 +1,6 @@
 webpackJsonp([128],{
 
-/***/ 2158:
+/***/ 2017:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,11 +8,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModAssignEditFeedbackModalPageModule", function() { return AddonModAssignEditFeedbackModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_feedback_modal__ = __webpack_require__(2314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_feedback_modal__ = __webpack_require__(2173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(1074);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(1004);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ var AddonModAssignEditFeedbackModalPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2314:
+/***/ 2173:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74,7 +74,7 @@ var AddonModAssignEditFeedbackModalPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_feedback_delegate__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_feedback_delegate__ = __webpack_require__(113);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -247,7 +247,7 @@ var AddonModAssignEditFeedbackModalPage = /** @class */ (function () {
     ], AddonModAssignEditFeedbackModalPage.prototype, "formElement", void 0);
     AddonModAssignEditFeedbackModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-assign-edit-feedback-modal',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/assign/pages/edit-feedback-modal/edit-feedback-modal.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ plugin.name }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <form name="addon-mod_assign-edit-feedback-form" *ngIf="userId && plugin" #editFeedbackForm>\n        <addon-mod-assign-feedback-plugin [assign]="assign" [submission]="submission" [userId]="userId" [plugin]="plugin" [edit]="true"></addon-mod-assign-feedback-plugin>\n        <button ion-button block (click)="done($event)">{{ \'core.done\' | translate }}</button>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/assign/pages/edit-feedback-modal/edit-feedback-modal.html"*/,
+            selector: 'page-addon-mod-assign-edit-feedback-modal',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/assign/pages/edit-feedback-modal/edit-feedback-modal.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ plugin.name }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <form name="addon-mod_assign-edit-feedback-form" *ngIf="userId && plugin" #editFeedbackForm>\n        <addon-mod-assign-feedback-plugin [assign]="assign" [submission]="submission" [userId]="userId" [plugin]="plugin" [edit]="true"></addon-mod-assign-feedback-plugin>\n        <button ion-button block (click)="done($event)">{{ \'core.done\' | translate }}</button>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/assign/pages/edit-feedback-modal/edit-feedback-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */],

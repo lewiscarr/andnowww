@@ -1,6 +1,6 @@
 webpackJsonp([114],{
 
-/***/ 2172:
+/***/ 2034:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,13 +9,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_comments_components_components_module__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_compile_components_compile_html_compile_html_module__ = __webpack_require__(479);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_rating_components_components_module__ = __webpack_require__(1086);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_components_module__ = __webpack_require__(477);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__entry__ = __webpack_require__(2328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_comments_components_components_module__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_compile_components_compile_html_compile_html_module__ = __webpack_require__(432);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_rating_components_components_module__ = __webpack_require__(1016);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_components_module__ = __webpack_require__(430);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__entry__ = __webpack_require__(2190);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -72,7 +72,7 @@ var AddonModDataEntryPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2328:
+/***/ 2190:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82,16 +82,16 @@ var AddonModDataEntryPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_utils__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_groups__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_groups__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_course_providers_course__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_data__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_sync__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_fields_delegate__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_components_module__ = __webpack_require__(477);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__core_comments_providers_comments__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__core_comments_components_comments_comments__ = __webpack_require__(486);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_data__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_sync__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_fields_delegate__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_components_module__ = __webpack_require__(430);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__core_comments_providers_comments__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__core_comments_components_comments_comments__ = __webpack_require__(439);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -459,7 +459,7 @@ var AddonModDataEntryPage = /** @class */ (function () {
     ], AddonModDataEntryPage.prototype, "comments", void 0);
     AddonModDataEntryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-data-entry',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/data/pages/entry/entry.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="title" contextLevel="module" [contextInstanceId]="module.id" [courseId]="courseId"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="entryLoaded && (isPullingToRefresh || !renderingEntry && !loadingRating && !loadingComments)" (ionRefresh)="refreshDatabase($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="entryLoaded && (isPullingToRefresh || !renderingEntry && !loadingRating && !loadingComments)">\n        <!-- Database entries found to be synchronized -->\n        <div class="core-warning-card" icon-start *ngIf="entry && entry.hasOffline">\n            <ion-icon name="warning"></ion-icon>\n            {{ \'core.hasdatatosync\' | translate: {$a: moduleName} }}\n        </div>\n\n        <ion-item text-wrap *ngIf="groupInfo && (groupInfo.separateGroups || groupInfo.visibleGroups)">\n            <ion-label id="addon-data-groupslabel" *ngIf="groupInfo.separateGroups">{{ \'core.groupsseparate\' | translate }}</ion-label>\n            <ion-label id="addon-data-groupslabel" *ngIf="groupInfo.visibleGroups">{{ \'core.groupsvisible\' | translate }}</ion-label>\n            <ion-select [(ngModel)]="selectedGroup" (ionChange)="setGroup(selectedGroup)" aria-labelledby="addon-data-groupslabel" interface="action-sheet">\n                <ion-option *ngFor="let groupOpt of groupInfo.groups" [value]="groupOpt.id">{{groupOpt.name}}</ion-option>\n            </ion-select>\n        </ion-item>\n\n        <div class="addon-data-contents addon-data-entries-{{data.id}}" *ngIf="entry">\n            <core-style [css]="data.csstemplate" prefix=".addon-data-entries-{{data.id}}"></core-style>\n\n            <core-compile-html [text]="entryHtml" [jsData]="jsData" [extraImports]="extraImports" (compiling)="setRenderingEntry($event)"></core-compile-html>\n        </div>\n\n        <core-rating-rate *ngIf="data && entry && ratingInfo && (!data.approval || entry.approved)" [ratingInfo]="ratingInfo" contextLevel="module" [instanceId]="data.coursemodule" [itemId]="entry.id" [itemSetId]="0" [courseId]="courseId" [aggregateMethod]="data.assessed" [scaleId]="data.scale" [userId]="entry.userid" (onLoading)="setLoadingRating($event)" (onUpdate)="ratingUpdated()"></core-rating-rate>\n        <core-rating-aggregate *ngIf="data && entry && ratingInfo" [ratingInfo]="ratingInfo" contextLevel="module" [instanceId]="data.coursemodule" [itemId]="entry.id" [courseId]="courseId" [aggregateMethod]="data.assessed" [scaleId]="data.scale"></core-rating-aggregate>\n\n        <ion-item *ngIf="data && data.comments && entry && entry.id > 0 && commentsEnabled">\n            <core-comments contextLevel="module" [instanceId]="data.coursemodule" component="mod_data" [itemId]="entry.id" area="database_entry" [displaySpinner]="false" [courseId]="courseId" (onLoading)="setLoadingComments($event)"></core-comments>\n        </ion-item>\n\n        <ion-grid *ngIf="previousOffset != null || nextOffset != null">\n            <ion-row align-items-center>\n                <ion-col *ngIf="previousOffset != null">\n                    <button ion-button block outline icon-start (click)="gotoEntry(previousOffset)">\n                        <ion-icon name="arrow-back" md="ios-arrow-back"></ion-icon>\n                        {{ \'core.previous\' | translate }}\n                    </button>\n                </ion-col>\n                <ion-col *ngIf="nextOffset != null">\n                    <button ion-button block icon-end (click)="gotoEntry(nextOffset)">\n                        {{ \'core.next\' | translate }}\n                        <ion-icon name="arrow-forward" md="ios-arrow-forward"></ion-icon>\n                    </button>\n                </ion-col>\n            </ion-row>\n        </ion-grid>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/data/pages/entry/entry.html"*/,
+            selector: 'page-addon-mod-data-entry',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/data/pages/entry/entry.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="title" contextLevel="module" [contextInstanceId]="module.id" [courseId]="courseId"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="entryLoaded && (isPullingToRefresh || !renderingEntry && !loadingRating && !loadingComments)" (ionRefresh)="refreshDatabase($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="entryLoaded && (isPullingToRefresh || !renderingEntry && !loadingRating && !loadingComments)">\n        <!-- Database entries found to be synchronized -->\n        <div class="core-warning-card" icon-start *ngIf="entry && entry.hasOffline">\n            <ion-icon name="warning"></ion-icon>\n            {{ \'core.hasdatatosync\' | translate: {$a: moduleName} }}\n        </div>\n\n        <ion-item text-wrap *ngIf="groupInfo && (groupInfo.separateGroups || groupInfo.visibleGroups)">\n            <ion-label id="addon-data-groupslabel" *ngIf="groupInfo.separateGroups">{{ \'core.groupsseparate\' | translate }}</ion-label>\n            <ion-label id="addon-data-groupslabel" *ngIf="groupInfo.visibleGroups">{{ \'core.groupsvisible\' | translate }}</ion-label>\n            <ion-select [(ngModel)]="selectedGroup" (ionChange)="setGroup(selectedGroup)" aria-labelledby="addon-data-groupslabel" interface="action-sheet">\n                <ion-option *ngFor="let groupOpt of groupInfo.groups" [value]="groupOpt.id">{{groupOpt.name}}</ion-option>\n            </ion-select>\n        </ion-item>\n\n        <div class="addon-data-contents addon-data-entries-{{data.id}}" *ngIf="entry">\n            <core-style [css]="data.csstemplate" prefix=".addon-data-entries-{{data.id}}"></core-style>\n\n            <core-compile-html [text]="entryHtml" [jsData]="jsData" [extraImports]="extraImports" (compiling)="setRenderingEntry($event)"></core-compile-html>\n        </div>\n\n        <core-rating-rate *ngIf="data && entry && ratingInfo && (!data.approval || entry.approved)" [ratingInfo]="ratingInfo" contextLevel="module" [instanceId]="data.coursemodule" [itemId]="entry.id" [itemSetId]="0" [courseId]="courseId" [aggregateMethod]="data.assessed" [scaleId]="data.scale" [userId]="entry.userid" (onLoading)="setLoadingRating($event)" (onUpdate)="ratingUpdated()"></core-rating-rate>\n        <core-rating-aggregate *ngIf="data && entry && ratingInfo" [ratingInfo]="ratingInfo" contextLevel="module" [instanceId]="data.coursemodule" [itemId]="entry.id" [courseId]="courseId" [aggregateMethod]="data.assessed" [scaleId]="data.scale"></core-rating-aggregate>\n\n        <ion-item *ngIf="data && data.comments && entry && entry.id > 0 && commentsEnabled">\n            <core-comments contextLevel="module" [instanceId]="data.coursemodule" component="mod_data" [itemId]="entry.id" area="database_entry" [displaySpinner]="false" [courseId]="courseId" (onLoading)="setLoadingComments($event)"></core-comments>\n        </ion-item>\n\n        <ion-grid *ngIf="previousOffset != null || nextOffset != null">\n            <ion-row align-items-center>\n                <ion-col *ngIf="previousOffset != null">\n                    <button ion-button block outline icon-start (click)="gotoEntry(previousOffset)">\n                        <ion-icon name="arrow-back" md="ios-arrow-back"></ion-icon>\n                        {{ \'core.previous\' | translate }}\n                    </button>\n                </ion-col>\n                <ion-col *ngIf="nextOffset != null">\n                    <button ion-button block icon-end (click)="gotoEntry(nextOffset)">\n                        {{ \'core.next\' | translate }}\n                        <ion-icon name="arrow-forward" md="ios-arrow-forward"></ion-icon>\n                    </button>\n                </ion-col>\n            </ion-row>\n        </ion-grid>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/data/pages/entry/entry.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_utils_utils__["b" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_groups__["a" /* CoreGroupsProvider */],
             __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["b" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_fields_delegate__["a" /* AddonModDataFieldsDelegate */],

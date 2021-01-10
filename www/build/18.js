@@ -1,6 +1,6 @@
 webpackJsonp([18],{
 
-/***/ 2274:
+/***/ 2134:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,9 +9,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_area__ = __webpack_require__(2434);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_area__ = __webpack_require__(2294);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,7 +60,7 @@ var CoreTagIndexAreaPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2434:
+/***/ 2294:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69,8 +69,8 @@ var CoreTagIndexAreaPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_tag_providers_tag__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_tag_providers_area_delegate__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_tag_providers_tag__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_tag_providers_area_delegate__ = __webpack_require__(135);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -211,7 +211,7 @@ var CoreTagIndexAreaPage = /** @class */ (function () {
     };
     CoreTagIndexAreaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-tag-index-area',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/tag/pages/index-area/index-area.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.tag.itemstaggedwith\' | translate: { $a: {tagarea: areaNameKey | translate, tag: tagName} } }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <ng-container *ngIf="loaded">\n            <core-dynamic-component [component]="areaComponent" [data]="{items: items}"></core-dynamic-component>\n        </ng-container>\n        <core-infinite-loading [enabled]="canLoadMore" (action)="loadMore($event)" [error]="loadMoreError"></core-infinite-loading>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/tag/pages/index-area/index-area.html"*/,
+            selector: 'page-core-tag-index-area',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/tag/pages/index-area/index-area.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.tag.itemstaggedwith\' | translate: { $a: {tagarea: areaNameKey | translate, tag: tagName} } }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <ng-container *ngIf="loaded">\n            <core-dynamic-component [component]="areaComponent" [data]="{items: items}"></core-dynamic-component>\n        </ng-container>\n        <core-infinite-loading [enabled]="canLoadMore" (action)="loadMore($event)" [error]="loadMoreError"></core-infinite-loading>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/tag/pages/index-area/index-area.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injector */], __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_4__core_tag_providers_tag__["a" /* CoreTagProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["b" /* CoreDomUtilsProvider */],

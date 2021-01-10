@@ -1,6 +1,6 @@
 webpackJsonp([127],{
 
-/***/ 2159:
+/***/ 2024:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,9 +10,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(1074);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__edit__ = __webpack_require__(2315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(1004);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__edit__ = __webpack_require__(2180);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ var AddonModAssignEditPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2315:
+/***/ 2180:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73,13 +73,13 @@ var AddonModAssignEditPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sync__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sync__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_fileuploader_providers_helper__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_assign__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_assign_offline__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_assign_sync__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_helper__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_fileuploader_providers_helper__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_assign__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_assign_offline__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_assign_sync__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_helper__ = __webpack_require__(134);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -472,7 +472,7 @@ var AddonModAssignEditPage = /** @class */ (function () {
     ], AddonModAssignEditPage.prototype, "formElement", void 0);
     AddonModAssignEditPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-assign-edit',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/assign/pages/edit/edit.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="title" contextLevel="module" [contextInstanceId]="moduleId" [courseId]="courseId"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <button ion-button clear (click)="save()" [attr.aria-label]="\'core.save\' | translate">\n                {{ \'core.save\' | translate }}\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <ion-list>\n            <!-- @todo: plagiarism_print_disclosure -->\n            <form name="addon-mod_assign-edit-form" *ngIf="userSubmission && userSubmission.plugins && userSubmission.plugins.length" #editSubmissionForm>\n                <!-- Submission statement. -->\n                <ion-item text-wrap *ngIf="submissionStatement">\n                    <ion-label><core-format-text [text]="submissionStatement" [filter]="false"></core-format-text></ion-label>\n                    <ion-checkbox item-end name="submissionstatement" [(ngModel)]="submissionStatementAccepted"></ion-checkbox>\n\n                    <!-- ion-checkbox doesn\'t use an input. Create a hidden input to hold the value. -->\n                    <input item-content type="hidden" [ngModel]="submissionStatementAccepted" name="submissionstatement">\n                </ion-item>\n\n                <addon-mod-assign-submission-plugin *ngFor="let plugin of userSubmission.plugins" [assign]="assign" [submission]="userSubmission" [plugin]="plugin" [edit]="true" [allowOffline]="allowOffline"></addon-mod-assign-submission-plugin>\n            </form>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/assign/pages/edit/edit.html"*/,
+            selector: 'page-addon-mod-assign-edit',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/assign/pages/edit/edit.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="title" contextLevel="module" [contextInstanceId]="moduleId" [courseId]="courseId"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <button ion-button clear (click)="save()" [attr.aria-label]="\'core.save\' | translate">\n                {{ \'core.save\' | translate }}\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <ion-list>\n            <!-- @todo: plagiarism_print_disclosure -->\n            <form name="addon-mod_assign-edit-form" *ngIf="userSubmission && userSubmission.plugins && userSubmission.plugins.length" #editSubmissionForm>\n                <!-- Submission statement. -->\n                <ion-item text-wrap *ngIf="submissionStatement">\n                    <ion-label><core-format-text [text]="submissionStatement" [filter]="false"></core-format-text></ion-label>\n                    <ion-checkbox item-end name="submissionstatement" [(ngModel)]="submissionStatementAccepted"></ion-checkbox>\n\n                    <!-- ion-checkbox doesn\'t use an input. Create a hidden input to hold the value. -->\n                    <input item-content type="hidden" [ngModel]="submissionStatementAccepted" name="submissionstatement">\n                </ion-item>\n\n                <addon-mod-assign-submission-plugin *ngFor="let plugin of userSubmission.plugins" [assign]="assign" [submission]="userSubmission" [plugin]="plugin" [edit]="true" [allowOffline]="allowOffline"></addon-mod-assign-submission-plugin>\n            </form>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/assign/pages/edit/edit.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["b" /* CoreSitesProvider */],
             __WEBPACK_IMPORTED_MODULE_5__providers_sync__["a" /* CoreSyncProvider */], __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["b" /* CoreDomUtilsProvider */],

@@ -1,6 +1,6 @@
 webpackJsonp([58],{
 
-/***/ 2232:
+/***/ 2091:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,8 +10,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__section_selector__ = __webpack_require__(2393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__section_selector__ = __webpack_require__(2252);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,14 +60,14 @@ var CoreCourseSectionSelectorPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2393:
+/***/ 2252:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCourseSectionSelectorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_helper__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_helper__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_course__ = __webpack_require__(12);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
@@ -144,7 +144,7 @@ var CoreCourseSectionSelectorPage = /** @class */ (function () {
     };
     CoreCourseSectionSelectorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-course-section-selector',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/course/pages/section-selector/section-selector.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.course.sections\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list id="core-course-section-selector" role="menu" aria-labelledby="core-course-section-button">\n        <ng-container *ngFor="let section of sections">\n            <a ion-item *ngIf="!section.hiddenbynumsections && section.id != stealthModulesSectionId" text-wrap (click)="selectSection(section)" [class.core-primary-selected-item]="selected.id == section.id" [class.item-dimmed]="section.visible === 0 || section.uservisible === false" detail-none role="menuitem" [attr.aria-hidden]="section.uservisible === false" [attr.aria-label]="section.formattedName || section.name">\n                <core-icon name="fa-folder" item-start></core-icon>\n                <h2><core-format-text [text]="section.formattedName || section.name" contextLevel="course" [contextInstanceId]="courseId"></core-format-text></h2>\n                <core-progress-bar *ngIf="section.progress >= 0" [progress]="section.progress"></core-progress-bar>\n                <ion-badge color="secondary" *ngIf="section.visible === 0 && section.uservisible !== false" text-wrap>{{ \'core.course.hiddenfromstudents\' | translate }}</ion-badge>\n                <ion-badge color="secondary" *ngIf="section.visible === 0 && section.uservisible === false" text-wrap>{{ \'core.notavailable\' | translate }}</ion-badge>\n                <ion-badge color="secondary" *ngIf="section.availabilityinfo" text-wrap><core-format-text [text]=" section.availabilityinfo" contextLevel="course" [contextInstanceId]="courseId"></core-format-text></ion-badge>\n            </a>\n        </ng-container>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/course/pages/section-selector/section-selector.html"*/,
+            selector: 'page-core-course-section-selector',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/course/pages/section-selector/section-selector.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.course.sections\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list id="core-course-section-selector" role="menu" aria-labelledby="core-course-section-button">\n        <ng-container *ngFor="let section of sections">\n            <a ion-item *ngIf="!section.hiddenbynumsections && section.id != stealthModulesSectionId" text-wrap (click)="selectSection(section)" [class.core-primary-selected-item]="selected.id == section.id" [class.item-dimmed]="section.visible === 0 || section.uservisible === false" detail-none role="menuitem" [attr.aria-hidden]="section.uservisible === false" [attr.aria-label]="section.formattedName || section.name">\n                <core-icon name="fa-folder" item-start></core-icon>\n                <h2><core-format-text [text]="section.formattedName || section.name" contextLevel="course" [contextInstanceId]="courseId"></core-format-text></h2>\n                <core-progress-bar *ngIf="section.progress >= 0" [progress]="section.progress"></core-progress-bar>\n                <ion-badge color="secondary" *ngIf="section.visible === 0 && section.uservisible !== false" text-wrap>{{ \'core.course.hiddenfromstudents\' | translate }}</ion-badge>\n                <ion-badge color="secondary" *ngIf="section.visible === 0 && section.uservisible === false" text-wrap>{{ \'core.notavailable\' | translate }}</ion-badge>\n                <ion-badge color="secondary" *ngIf="section.availabilityinfo" text-wrap><core-format-text [text]=" section.availabilityinfo" contextLevel="course" [contextInstanceId]="courseId"></core-format-text></ion-badge>\n            </a>\n        </ng-container>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/course/pages/section-selector/section-selector.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_helper__["b" /* CoreCourseHelperProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */]])
     ], CoreCourseSectionSelectorPage);

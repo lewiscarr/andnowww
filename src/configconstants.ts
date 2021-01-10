@@ -17,8 +17,8 @@ export class CoreConfigConstants {
     static app_id = 'com.moodle.moodlemobile';
     static appname = 'Moodle Mobile';
     static desktopappname = 'Moodle Desktop';
-    static versioncode = 3930;
-    static versionname = '3.9.3';
+    static versioncode = 3940;
+    static versionname = '3.9.4';
     static cache_update_frequency_usually = 420000;
     static cache_update_frequency_often = 1200000;
     static cache_update_frequency_sometimes = 3600000;
@@ -126,6 +126,6 @@ export class CoreConfigConstants {
         mac: 'id1255924440',
         linux: 'https://download.moodle.org/desktop/download.php?platform=linux&arch=64',
     };
-    static compilationtime = 1609939036228;
+    static compilationtime = 1610288861786;
     static lastcommit = '';
 }

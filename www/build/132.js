@@ -1,6 +1,6 @@
 webpackJsonp([132],{
 
-/***/ 2150:
+/***/ 2010:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,8 +10,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__devices__ = __webpack_require__(2306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__devices__ = __webpack_require__(2166);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,15 +60,15 @@ var AddonMessageOutputAirnotifierDevicesPageModule = /** @class */ (function () 
 
 /***/ }),
 
-/***/ 2306:
+/***/ 2166:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonMessageOutputAirnotifierDevicesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_pushnotifications_providers_pushnotifications__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_airnotifier__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_pushnotifications_providers_pushnotifications__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_airnotifier__ = __webpack_require__(441);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -201,7 +201,7 @@ var AddonMessageOutputAirnotifierDevicesPage = /** @class */ (function () {
     };
     AddonMessageOutputAirnotifierDevicesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-message-output-airnotifier-devices',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.messageoutput_airnotifier.processorsettingsdesc\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="devicesLoaded" (ionRefresh)="refreshDevices($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="devicesLoaded">\n        <ion-list>\n            <ion-item text-wrap *ngFor="let device of devices">\n                <ion-label [class.core-bold]="device.current">\n                    {{ device.name }} {{ device.model }} {{ device.platform }} {{ device.version }}\n                    <span *ngIf="device.current">({{ \'core.currentdevice\' | translate }})</span>\n                </ion-label>\n                <ion-spinner *ngIf="device.updating" item-end></ion-spinner>\n                <ion-toggle [disabled]="device.updating" [(ngModel)]="device.enable" (ngModelChange)="enableDevice(device, device.enable)"></ion-toggle>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/,
+            selector: 'page-addon-message-output-airnotifier-devices',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.messageoutput_airnotifier.processorsettingsdesc\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="devicesLoaded" (ionRefresh)="refreshDevices($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="devicesLoaded">\n        <ion-list>\n            <ion-item text-wrap *ngFor="let device of devices">\n                <ion-label [class.core-bold]="device.current">\n                    {{ device.name }} {{ device.model }} {{ device.platform }} {{ device.version }}\n                    <span *ngIf="device.current">({{ \'core.currentdevice\' | translate }})</span>\n                </ion-label>\n                <ion-spinner *ngIf="device.updating" item-end></ion-spinner>\n                <ion-toggle [disabled]="device.updating" [(ngModel)]="device.enable" (ngModelChange)="enableDevice(device, device.enable)"></ion-toggle>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__["b" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_airnotifier__["a" /* AddonMessageOutputAirnotifierProvider */],
             __WEBPACK_IMPORTED_MODULE_2__core_pushnotifications_providers_pushnotifications__["a" /* CorePushNotificationsProvider */]])

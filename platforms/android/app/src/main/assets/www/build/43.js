@@ -1,6 +1,6 @@
 webpackJsonp([43],{
 
-/***/ 2247:
+/***/ 2111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,10 +8,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginCredentialsPageModule", function() { return CoreLoginCredentialsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__credentials__ = __webpack_require__(2407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__credentials__ = __webpack_require__(2271);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,7 +60,7 @@ var CoreLoginCredentialsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2407:
+/***/ 2271:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73,11 +73,11 @@ var CoreLoginCredentialsPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sites__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_url__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_forms__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__configconstants__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_urlschemes__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_url__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_forms__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__configconstants__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_urlschemes__ = __webpack_require__(232);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -382,7 +382,7 @@ var CoreLoginCredentialsPage = /** @class */ (function () {
         // Show some instructions first.
         this.domUtils.showAlertWithOptions({
             title: this.translate.instant('core.login.faqwhereisqrcode'),
-            message: this.translate.instant('core.login.faqwhereisqrcodeanswer', { $image: __WEBPACK_IMPORTED_MODULE_9__providers_helper__["a" /* CoreLoginHelperProvider */].FAQ_QRCODE_IMAGE_HTML }),
+            message: this.translate.instant('core.login.faqwhereisqrcodeanswer', { $image: __WEBPACK_IMPORTED_MODULE_9__providers_helper__["b" /* CoreLoginHelperProvider */].FAQ_QRCODE_IMAGE_HTML }),
             buttons: [
                 {
                     text: this.translate.instant('core.cancel'),
@@ -451,14 +451,14 @@ var CoreLoginCredentialsPage = /** @class */ (function () {
     ], CoreLoginCredentialsPage.prototype, "formElement", void 0);
     CoreLoginCredentialsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-credentials',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/login/pages/credentials/credentials.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.login.login\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="isFixedUrlSet" ion-button icon-only navPush="CoreAppSettingsPage" [attr.aria-label]="\'core.settings.appsettings\' | translate">\n                <core-icon name="fa-cogs"></core-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <core-loading [hideUntil]="pageLoaded">\n        <div text-wrap text-center margin-bottom>\n            <div class="core-login-site-logo">\n                <!-- Show site logo or a default image. -->\n                <img *ngIf="logoUrl" [src]="logoUrl" role="presentation" onError="this.src=\'assets/img/login_logo.png\'">\n                <img *ngIf="!logoUrl" src="assets/img/login_logo.png" role="presentation">\n            </div>\n\n            <h3 *ngIf="siteName" padding class="core-sitename"><core-format-text [text]="siteName" [filter]="false"></core-format-text></h3>\n            <p class="core-siteurl">{{siteUrl}}</p>\n        </div>\n\n        <form ion-list [formGroup]="credForm" (ngSubmit)="login($event)" class="core-login-form" #credentialsForm>\n            <ion-item *ngIf="siteChecked && !isBrowserSSO">\n                <ion-input type="text" name="username" placeholder="{{ \'core.login.username\' | translate }}" formControlName="username" autocapitalize="none" autocorrect="off" autocomplete="username"></ion-input>\n            </ion-item>\n            <ion-item *ngIf="siteChecked && !isBrowserSSO" margin-bottom>\n                <core-show-password item-content [name]="\'password\'">\n                    <ion-input class="core-ioninput-password" name="password" type="password" placeholder="{{ \'core.login.password\' | translate }}" formControlName="password" core-show-password [clearOnEdit]="false" autocomplete="current-password"></ion-input>\n                </core-show-password>\n            </ion-item>\n            <div padding>\n                <button ion-button block [disabled]="siteChecked && !isBrowserSSO && !credForm.valid" class="core-login-login-button">{{ \'core.login.loginbutton\' | translate }}</button>\n            </div>\n\n            <ng-container *ngIf="showScanQR">\n                <div class="core-login-site-qrcode-separator">{{ \'core.login.or\' | translate }}</div>\n                <ion-item class="core-login-site-qrcode" no-lines>\n                    <a ion-button block color="light" margin-top icon-start text-wrap (click)="showInstructionsAndScanQR()">\n                        <core-icon name="fa-qrcode" aria-hidden="true"></core-icon>\n                        {{ \'core.scanqr\' | translate }}\n                    </a>\n                </ion-item>\n            </ng-container>\n        </form>\n\n        <!-- Forgotten password button. -->\n        <ion-list no-lines *ngIf="showForgottenPassword" class="core-login-forgotten-password core-login-link">\n            <a ion-item text-center text-wrap (click)="forgottenPassword()" detail-none>\n                {{ \'core.login.forgotten\' | translate }}\n            </a>\n        </ion-list>\n\n        <ion-list *ngIf="identityProviders && identityProviders.length" padding-top class="core-login-identity-providers">\n            <ion-item text-wrap no-lines><h3 class="item-heading">{{ \'core.login.potentialidps\' | translate }}</h3></ion-item>\n            <button ion-item *ngFor="let provider of identityProviders" text-wrap class="core-oauth-icon" (click)="oauthClicked(provider)" title="{{provider.name}}">\n                <img [src]="provider.iconurl" alt="" width="32" height="32" item-start>\n                {{provider.name}}\n            </button>\n        </ion-list>\n\n        <ion-list *ngIf="canSignup" padding-top class="core-login-sign-up">\n            <ion-item text-wrap no-lines><h3 class="item-heading">{{ \'core.login.firsttime\' | translate }}</h3></ion-item>\n            <ion-item no-lines text-wrap *ngIf="authInstructions">\n                <p><core-format-text [text]="authInstructions" [filter]="false"></core-format-text></p>\n            </ion-item>\n            <button ion-button block color="light" (click)="signup()">{{ \'core.login.startsignup\' | translate }}</button>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/login/pages/credentials/credentials.html"*/,
+            selector: 'page-core-login-credentials',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/login/pages/credentials/credentials.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.login.login\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="isFixedUrlSet" ion-button icon-only navPush="CoreAppSettingsPage" [attr.aria-label]="\'core.settings.appsettings\' | translate">\n                <core-icon name="fa-cogs"></core-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <core-loading [hideUntil]="pageLoaded">\n        <div text-wrap text-center margin-bottom>\n            <div class="core-login-site-logo">\n                <!-- Show site logo or a default image. -->\n                <img *ngIf="logoUrl" [src]="logoUrl" role="presentation" onError="this.src=\'assets/img/login_logo.png\'">\n                <img *ngIf="!logoUrl" src="assets/img/login_logo.png" role="presentation">\n            </div>\n\n            <h3 *ngIf="siteName" padding class="core-sitename"><core-format-text [text]="siteName" [filter]="false"></core-format-text></h3>\n            <p class="core-siteurl">{{siteUrl}}</p>\n        </div>\n\n        <form ion-list [formGroup]="credForm" (ngSubmit)="login($event)" class="core-login-form" #credentialsForm>\n            <ion-item *ngIf="siteChecked && !isBrowserSSO">\n                <ion-input type="text" name="username" placeholder="{{ \'core.login.username\' | translate }}" formControlName="username" autocapitalize="none" autocorrect="off" autocomplete="username"></ion-input>\n            </ion-item>\n            <ion-item *ngIf="siteChecked && !isBrowserSSO" margin-bottom>\n                <core-show-password item-content [name]="\'password\'">\n                    <ion-input class="core-ioninput-password" name="password" type="password" placeholder="{{ \'core.login.password\' | translate }}" formControlName="password" core-show-password [clearOnEdit]="false" autocomplete="current-password"></ion-input>\n                </core-show-password>\n            </ion-item>\n            <div padding>\n                <button ion-button block [disabled]="siteChecked && !isBrowserSSO && !credForm.valid" class="core-login-login-button">{{ \'core.login.loginbutton\' | translate }}</button>\n            </div>\n\n            <ng-container *ngIf="showScanQR">\n                <div class="core-login-site-qrcode-separator">{{ \'core.login.or\' | translate }}</div>\n                <ion-item class="core-login-site-qrcode" no-lines>\n                    <a ion-button block color="light" margin-top icon-start text-wrap (click)="showInstructionsAndScanQR()">\n                        <core-icon name="fa-qrcode" aria-hidden="true"></core-icon>\n                        {{ \'core.scanqr\' | translate }}\n                    </a>\n                </ion-item>\n            </ng-container>\n        </form>\n\n        <!-- Forgotten password button. -->\n        <ion-list no-lines *ngIf="showForgottenPassword" class="core-login-forgotten-password core-login-link">\n            <a ion-item text-center text-wrap (click)="forgottenPassword()" detail-none>\n                {{ \'core.login.forgotten\' | translate }}\n            </a>\n        </ion-list>\n\n        <ion-list *ngIf="identityProviders && identityProviders.length" padding-top class="core-login-identity-providers">\n            <ion-item text-wrap no-lines><h3 class="item-heading">{{ \'core.login.potentialidps\' | translate }}</h3></ion-item>\n            <button ion-item *ngFor="let provider of identityProviders" text-wrap class="core-oauth-icon" (click)="oauthClicked(provider)" title="{{provider.name}}">\n                <img [src]="provider.iconurl" alt="" width="32" height="32" item-start>\n                {{provider.name}}\n            </button>\n        </ion-list>\n\n        <ion-list *ngIf="canSignup" padding-top class="core-login-sign-up">\n            <ion-item text-wrap no-lines><h3 class="item-heading">{{ \'core.login.firsttime\' | translate }}</h3></ion-item>\n            <ion-item no-lines text-wrap *ngIf="authInstructions">\n                <p><core-format-text [text]="authInstructions" [filter]="false"></core-format-text></p>\n            </ion-item>\n            <button ion-button block color="light" (click)="signup()">{{ \'core.login.startsignup\' | translate }}</button>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/login/pages/credentials/credentials.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_10__angular_forms__["a" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_3__providers_app__["b" /* CoreAppProvider */],
             __WEBPACK_IMPORTED_MODULE_6__providers_sites__["b" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__providers_helper__["a" /* CoreLoginHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_9__providers_helper__["b" /* CoreLoginHelperProvider */],
             __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__["b" /* CoreDomUtilsProvider */],
             __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_5__providers_events__["b" /* CoreEventsProvider */]])

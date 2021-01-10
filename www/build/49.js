@@ -1,6 +1,6 @@
 webpackJsonp([49],{
 
-/***/ 2242:
+/***/ 2101:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,10 +8,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreEmulatorCaptureMediaPageModule", function() { return CoreEmulatorCaptureMediaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__capture_media__ = __webpack_require__(2402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__capture_media__ = __webpack_require__(2261);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,7 +60,7 @@ var CoreEmulatorCaptureMediaPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2402:
+/***/ 2261:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68,12 +68,12 @@ var CoreEmulatorCaptureMediaPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_file__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_file__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_mimetype__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_mimetype__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_time__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_media__ = __webpack_require__(1102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_time__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_media__ = __webpack_require__(1032);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -594,7 +594,7 @@ var CoreEmulatorCaptureMediaPage = /** @class */ (function () {
     ], CoreEmulatorCaptureMediaPage.prototype, "previewAudio", void 0);
     CoreEmulatorCaptureMediaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-emulator-capture-media',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/emulator/pages/capture-media/capture-media.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-buttons start>\n            <button ion-button (click)="cancel()">{{ \'core.cancel\' | translate }}</button>\n        </ion-buttons>\n\n        <ion-title>{{ title | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button *ngIf="hasCaptured" (click)="done()">{{ \'core.done\' | translate }}</button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content  class="has-footer">\n    <core-loading [hideUntil]="readyToCapture">\n        <div class="core-av-wrapper">\n            <!-- Video stream for image and video. -->\n            <video *ngIf="!isAudio" [hidden]="hasCaptured" class="core-webcam-stream" autoplay #streamVideo></video>\n\n            <!-- For video recording, use 2 videos and show/hide them because a CSS rule caused problems with the controls. -->\n            <video *ngIf="isVideo" [hidden]="!hasCaptured" class="core-webcam-video-captured" controls #previewVideo></video>\n\n            <!-- Canvas to treat the image and an img to show the result. -->\n            <canvas *ngIf="isImage" class="core-webcam-image-canvas" #imgCanvas></canvas>\n            <img *ngIf="isImage" [hidden]="!hasCaptured" class="core-webcam-image" alt="{{ \'core.capturedimage\' | translate }}" #previewImage>\n\n            <!-- Recording audio. -->\n            <div *ngIf="isAudio" class="core-audio-record-container">\n                <!-- Canvas to show audio waves when recording audio in desktop. -->\n                <canvas [hidden]="hasCaptured || isCordovaAudioCapture" class="core-audio-canvas" #streamAudio></canvas>\n\n                <!-- Button to start/stop in mobile devices. -->\n                <button ion-button icon-only clear *ngIf="!hasCaptured && isCordovaAudioCapture" (click)="actionClicked()" [attr.aria-label]="title">\n                    <ion-icon *ngIf="!isCapturing" name="microphone"></ion-icon>\n                    <ion-icon *ngIf="isCapturing" name="square"></ion-icon>\n                </button>\n\n                <!-- Audio player to listen to the result. -->\n                <audio [hidden]="!hasCaptured" class="core-audio-captured" controls #previewAudio></audio>\n            </div>\n        </div>\n    </core-loading>\n</ion-content>\n\n<ion-footer>\n    <ion-row *ngIf="readyToCapture">\n        <ion-col></ion-col>\n        <ion-col text-center>\n            <button ion-button icon-only clear *ngIf="!hasCaptured && !isCordovaAudioCapture" (click)="actionClicked()" [attr.aria-label]="title">\n                <ion-icon *ngIf="!isCapturing && isAudio" name="microphone"></ion-icon>\n                <ion-icon *ngIf="!isCapturing && isVideo" name="videocam"></ion-icon>\n                <ion-icon *ngIf="isImage" name="camera"></ion-icon>\n                <ion-icon *ngIf="isCapturing" name="square"></ion-icon>\n            </button>\n            <button ion-button icon-only clear *ngIf="hasCaptured" (click)="discard()" [attr.aria-label]="\'core.discard\' | translate">\n                <ion-icon name="trash"></ion-icon>\n            </button>\n        </ion-col>\n        <ion-col padding text-end class="chrono-container">\n            <core-chrono *ngIf="!isImage" [hidden]="hasCaptured" [running]="isCapturing" [reset]="resetChrono" [endTime]="maxTime" (onEnd)="stopCapturing()"></core-chrono>\n        </ion-col>\n    </ion-row>\n</ion-footer>\n\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/emulator/pages/capture-media/capture-media.html"*/,
+            selector: 'page-core-emulator-capture-media',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/emulator/pages/capture-media/capture-media.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-buttons start>\n            <button ion-button (click)="cancel()">{{ \'core.cancel\' | translate }}</button>\n        </ion-buttons>\n\n        <ion-title>{{ title | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button *ngIf="hasCaptured" (click)="done()">{{ \'core.done\' | translate }}</button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content  class="has-footer">\n    <core-loading [hideUntil]="readyToCapture">\n        <div class="core-av-wrapper">\n            <!-- Video stream for image and video. -->\n            <video *ngIf="!isAudio" [hidden]="hasCaptured" class="core-webcam-stream" autoplay #streamVideo></video>\n\n            <!-- For video recording, use 2 videos and show/hide them because a CSS rule caused problems with the controls. -->\n            <video *ngIf="isVideo" [hidden]="!hasCaptured" class="core-webcam-video-captured" controls #previewVideo></video>\n\n            <!-- Canvas to treat the image and an img to show the result. -->\n            <canvas *ngIf="isImage" class="core-webcam-image-canvas" #imgCanvas></canvas>\n            <img *ngIf="isImage" [hidden]="!hasCaptured" class="core-webcam-image" alt="{{ \'core.capturedimage\' | translate }}" #previewImage>\n\n            <!-- Recording audio. -->\n            <div *ngIf="isAudio" class="core-audio-record-container">\n                <!-- Canvas to show audio waves when recording audio in desktop. -->\n                <canvas [hidden]="hasCaptured || isCordovaAudioCapture" class="core-audio-canvas" #streamAudio></canvas>\n\n                <!-- Button to start/stop in mobile devices. -->\n                <button ion-button icon-only clear *ngIf="!hasCaptured && isCordovaAudioCapture" (click)="actionClicked()" [attr.aria-label]="title">\n                    <ion-icon *ngIf="!isCapturing" name="microphone"></ion-icon>\n                    <ion-icon *ngIf="isCapturing" name="square"></ion-icon>\n                </button>\n\n                <!-- Audio player to listen to the result. -->\n                <audio [hidden]="!hasCaptured" class="core-audio-captured" controls #previewAudio></audio>\n            </div>\n        </div>\n    </core-loading>\n</ion-content>\n\n<ion-footer>\n    <ion-row *ngIf="readyToCapture">\n        <ion-col></ion-col>\n        <ion-col text-center>\n            <button ion-button icon-only clear *ngIf="!hasCaptured && !isCordovaAudioCapture" (click)="actionClicked()" [attr.aria-label]="title">\n                <ion-icon *ngIf="!isCapturing && isAudio" name="microphone"></ion-icon>\n                <ion-icon *ngIf="!isCapturing && isVideo" name="videocam"></ion-icon>\n                <ion-icon *ngIf="isImage" name="camera"></ion-icon>\n                <ion-icon *ngIf="isCapturing" name="square"></ion-icon>\n            </button>\n            <button ion-button icon-only clear *ngIf="hasCaptured" (click)="discard()" [attr.aria-label]="\'core.discard\' | translate">\n                <ion-icon name="trash"></ion-icon>\n            </button>\n        </ion-col>\n        <ion-col padding text-end class="chrono-container">\n            <core-chrono *ngIf="!isImage" [hidden]="hasCaptured" [running]="isCapturing" [reset]="resetChrono" [endTime]="maxTime" (onEnd)="stopCapturing()"></core-chrono>\n        </ion-col>\n    </ion-row>\n</ion-footer>\n\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/emulator/pages/capture-media/capture-media.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */],

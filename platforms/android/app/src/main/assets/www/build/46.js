@@ -1,6 +1,6 @@
 webpackJsonp([46],{
 
-/***/ 2244:
+/***/ 2105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,10 +9,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coursesplit__ = __webpack_require__(2404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coursesplit__ = __webpack_require__(2265);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(1080);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(1010);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ var CoreGradesCourseSplitPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2404:
+/***/ 2265:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -107,7 +107,7 @@ var CoreGradesCourseSplitPage = /** @class */ (function () {
     }
     CoreGradesCourseSplitPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-grades-course-split',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/grades/pages/coursesplit/coursesplit.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.grades.grades\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <core-grades-course class="core-avoid-header" [courseId]="courseId" [userId]="userId" [gradeId]="gradeId"></core-grades-course>\n</core-split-view>\n\n\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/grades/pages/coursesplit/coursesplit.html"*/,
+            selector: 'page-core-grades-course-split',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/grades/pages/coursesplit/coursesplit.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.grades.grades\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <core-grades-course class="core-avoid-header" [courseId]="courseId" [userId]="userId" [gradeId]="gradeId"></core-grades-course>\n</core-split-view>\n\n\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/grades/pages/coursesplit/coursesplit.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["b" /* CoreSitesProvider */]])
     ], CoreGradesCourseSplitPage);

@@ -1,6 +1,6 @@
 webpackJsonp([27],{
 
-/***/ 2264:
+/***/ 2122:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,10 +9,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__licenses__ = __webpack_require__(2424);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__licenses__ = __webpack_require__(2282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(66);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,14 +63,14 @@ var CoreSettingsLicensesPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2424:
+/***/ 2282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSettingsLicensesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__configconstants__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__configconstants__ = __webpack_require__(59);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -138,7 +138,7 @@ var CoreSettingsLicensesPage = /** @class */ (function () {
     };
     CoreSettingsLicensesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-settings-licenses',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/settings/pages/licenses/licenses.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.settings.opensourcelicenses\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <a *ngIf="error" ion-item text-wrap [href]="licensesUrl" core-link auto-login="no">\n            {{ \'core.settings.opensourcelicenses\' | translate }}\n        </a>\n\n        <ng-container *ngIf="!error">\n            <ion-item *ngFor="let license of licenses" text-wrap>\n                <h2>\n                    <a *ngIf="license.repository" [href]="license.repository" core-link auto-login="no">{{ license.name }}</a>\n                    <ng-container *ngIf="!license.repository">{{ license.name }}</ng-container> - {{ license.version }}\n                </h2>\n                <h3 *ngIf="license.publisher">{{ \'core.settings.publisher\' | translate }}{{ \'core.labelsep\' | translate }} {{ license.publisher }}</h3>\n                <p>{{ \'core.settings.license\' | translate }}{{ \'core.labelsep\' | translate }} {{ license.licenses }}</p>\n                <p><a *ngIf="license.url" [href]="license.url" core-link auto-login="no">{{ license.url }}</a></p>\n                <p><a *ngIf="license.email" [href]="\'mailto:\' +license.email" core-link auto-login="no">{{ license.email }}</a></p>\n                <a *ngIf="license.licenseUrl" [href]="license.licenseUrl" target="_blank" ion-button ion-button clear item-end core-link auto-login="no">{{ \'core.view\' | translate }}</a>\n            </ion-item>\n        </ng-container>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/settings/pages/licenses/licenses.html"*/,
+            selector: 'page-core-settings-licenses',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/settings/pages/licenses/licenses.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.settings.opensourcelicenses\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <a *ngIf="error" ion-item text-wrap [href]="licensesUrl" core-link auto-login="no">\n            {{ \'core.settings.opensourcelicenses\' | translate }}\n        </a>\n\n        <ng-container *ngIf="!error">\n            <ion-item *ngFor="let license of licenses" text-wrap>\n                <h2>\n                    <a *ngIf="license.repository" [href]="license.repository" core-link auto-login="no">{{ license.name }}</a>\n                    <ng-container *ngIf="!license.repository">{{ license.name }}</ng-container> - {{ license.version }}\n                </h2>\n                <h3 *ngIf="license.publisher">{{ \'core.settings.publisher\' | translate }}{{ \'core.labelsep\' | translate }} {{ license.publisher }}</h3>\n                <p>{{ \'core.settings.license\' | translate }}{{ \'core.labelsep\' | translate }} {{ license.licenses }}</p>\n                <p><a *ngIf="license.url" [href]="license.url" core-link auto-login="no">{{ license.url }}</a></p>\n                <p><a *ngIf="license.email" [href]="\'mailto:\' +license.email" core-link auto-login="no">{{ license.email }}</a></p>\n                <a *ngIf="license.licenseUrl" [href]="license.licenseUrl" target="_blank" ion-button ion-button clear item-end core-link auto-login="no">{{ \'core.view\' | translate }}</a>\n            </ion-item>\n        </ng-container>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/settings/pages/licenses/licenses.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
     ], CoreSettingsLicensesPage);

@@ -1,6 +1,6 @@
 webpackJsonp([37],{
 
-/***/ 2253:
+/***/ 2116:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,9 +8,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSiteOnboardingPageModule", function() { return CoreLoginSiteOnboardingPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_onboarding__ = __webpack_require__(2413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_onboarding__ = __webpack_require__(2276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(13);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
@@ -60,7 +60,7 @@ var CoreLoginSiteOnboardingPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2413:
+/***/ 2276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68,8 +68,8 @@ var CoreLoginSiteOnboardingPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_utils__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_config__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_config__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(88);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -153,11 +153,11 @@ var CoreLoginSiteOnboardingPage = /** @class */ (function () {
      * Saves the onboarding has finished.
      */
     CoreLoginSiteOnboardingPage.prototype.saveOnboardingDone = function () {
-        __WEBPACK_IMPORTED_MODULE_3__providers_config__["a" /* CoreConfig */].instance.set(__WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* CoreLoginHelperProvider */].ONBOARDING_DONE, 1);
+        __WEBPACK_IMPORTED_MODULE_3__providers_config__["a" /* CoreConfig */].instance.set(__WEBPACK_IMPORTED_MODULE_4__providers_helper__["b" /* CoreLoginHelperProvider */].ONBOARDING_DONE, 1);
     };
     CoreLoginSiteOnboardingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-site-onboarding',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/login/pages/site-onboarding/site-onboarding.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-buttons step>\n            <button ion-button icon-only (click)="previous($event)" [attr.aria-label]="\'core.back\' | translate">\n                <ion-icon name="arrow-back"></ion-icon>\n            </button>\n        </ion-buttons>\n        <ion-buttons end>\n            <button ion-button (click)="skip($event)" [attr.aria-label]="\'core.skip\' | translate">\n                {{\'core.skip\' | translate}}\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <div>\n        <div text-center padding class="core-login-site-logo">\n            <img src="assets/img/login_logo.png" class="avatar-full login-logo" role="presentation">\n        </div>\n\n        <h3 class="core-login-onboarding-step">\n            {{\'core.login.onboardingwelcome\' | translate}}\n        </h3>\n\n        <div *ngIf="step == 0" class="core-login-onboarding-step">\n            <a ion-button block (click)="skip($event)" margin-bottom color="light">{{\'core.login.onboardingimalearner\' | translate}}</a>\n            <a ion-button block (click)="next($event)" margin-bottom color="light">{{\'core.login.onboardingimaneducator\' | translate}}</a>\n        </div>\n\n        <div *ngIf="step == 1" class="core-login-onboarding-step">\n            <p class="core-login-onboarding-text">\n                {{ \'core.login.onboardingtoconnect\' | translate }}\n            </p>\n            <a ion-button block (click)="skip($event)" margin-bottom color="light">{{ \'core.login.onboardingialreadyhaveasite\' | translate }}</a>\n            <a ion-button block (click)="next($event)" margin-bottom>{{ \'core.login.onboardingineedasite\' | translate }}</a>\n        </div>\n\n        <div *ngIf="step == 2" class="core-login-onboarding-step">\n            <ul class="core-login-onboarding-text">\n                <li><core-icon name="fa-check-circle-o"></core-icon> {{ \'core.login.onboardingcreatemanagecourses\' | translate }}</li>\n                <li><core-icon name="fa-check-circle-o"></core-icon> {{ \'core.login.onboardingenrolmanagestudents\' | translate }}</li>\n                <li><core-icon name="fa-check-circle-o"></core-icon> {{ \'core.login.onboardingprovidefeedback\' | translate }}</li>\n            </ul>\n\n            <a ion-button block (click)="gotoWeb($event)" margin-bottom>{{ \'core.login.onboardinggetstarted\' | translate }}</a>\n        </div>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/login/pages/site-onboarding/site-onboarding.html"*/,
+            selector: 'page-core-login-site-onboarding',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/login/pages/site-onboarding/site-onboarding.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-buttons step>\n            <button ion-button icon-only (click)="previous($event)" [attr.aria-label]="\'core.back\' | translate">\n                <ion-icon name="arrow-back"></ion-icon>\n            </button>\n        </ion-buttons>\n        <ion-buttons end>\n            <button ion-button (click)="skip($event)" [attr.aria-label]="\'core.skip\' | translate">\n                {{\'core.skip\' | translate}}\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <div>\n        <div text-center padding class="core-login-site-logo">\n            <img src="assets/img/login_logo.png" class="avatar-full login-logo" role="presentation">\n        </div>\n\n        <h3 class="core-login-onboarding-step">\n            {{\'core.login.onboardingwelcome\' | translate}}\n        </h3>\n\n        <div *ngIf="step == 0" class="core-login-onboarding-step">\n            <a ion-button block (click)="skip($event)" margin-bottom color="light">{{\'core.login.onboardingimalearner\' | translate}}</a>\n            <a ion-button block (click)="next($event)" margin-bottom color="light">{{\'core.login.onboardingimaneducator\' | translate}}</a>\n        </div>\n\n        <div *ngIf="step == 1" class="core-login-onboarding-step">\n            <p class="core-login-onboarding-text">\n                {{ \'core.login.onboardingtoconnect\' | translate }}\n            </p>\n            <a ion-button block (click)="skip($event)" margin-bottom color="light">{{ \'core.login.onboardingialreadyhaveasite\' | translate }}</a>\n            <a ion-button block (click)="next($event)" margin-bottom>{{ \'core.login.onboardingineedasite\' | translate }}</a>\n        </div>\n\n        <div *ngIf="step == 2" class="core-login-onboarding-step">\n            <ul class="core-login-onboarding-text">\n                <li><core-icon name="fa-check-circle-o"></core-icon> {{ \'core.login.onboardingcreatemanagecourses\' | translate }}</li>\n                <li><core-icon name="fa-check-circle-o"></core-icon> {{ \'core.login.onboardingenrolmanagestudents\' | translate }}</li>\n                <li><core-icon name="fa-check-circle-o"></core-icon> {{ \'core.login.onboardingprovidefeedback\' | translate }}</li>\n            </ul>\n\n            <a ion-button block (click)="gotoWeb($event)" margin-bottom>{{ \'core.login.onboardinggetstarted\' | translate }}</a>\n        </div>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/login/pages/site-onboarding/site-onboarding.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */]])
     ], CoreLoginSiteOnboardingPage);

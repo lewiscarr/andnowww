@@ -713,9 +713,9 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-wkwebview-cookies": "1.0.0",
     "cordova-plugin-zip": "3.1.0",
     "cordova-sqlite-storage": "4.0.0",
+    "cordova-support-google-services": "1.2.1",
     "cordova.plugins.diagnostic": "5.0.2",
     "nl.kingsquare.cordova.background-audio": "1.0.1",
-    "cordova-support-google-services": "1.2.1",
     "phonegap-plugin-multidex": "1.0.0",
     "phonegap-plugin-push": "2.2.3"
   };

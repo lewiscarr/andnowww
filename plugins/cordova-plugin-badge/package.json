@@ -1,4 +1,10 @@
 {
+  "_args": [
+    [
+      "cordova-plugin-badge@0.8.8",
+      "/Users/lewiscarr/Documents/moodleapp"
+    ]
+  ],
   "_from": "cordova-plugin-badge@0.8.8",
   "_id": "cordova-plugin-badge@0.8.8",
   "_inBundle": false,
@@ -16,20 +22,17 @@
     "fetchSpec": "0.8.8"
   },
   "_requiredBy": [
-    "#DEV:/",
-    "#USER"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/cordova-plugin-badge/-/cordova-plugin-badge-0.8.8.tgz",
-  "_shasum": "0924018699b48f92dd3b33615452737582144c96",
-  "_spec": "cordova-plugin-badge@0.8.8",
-  "_where": "/Users/lewiscarr/Documents/MyApp",
+  "_spec": "0.8.8",
+  "_where": "/Users/lewiscarr/Documents/moodleapp",
   "author": {
     "name": "Sebastián Katzer"
   },
   "bugs": {
     "url": "https://github.com/katzer/cordova-plugin-badge/issues"
   },
-  "bundleDependencies": false,
   "cordova": {
     "id": "cordova-plugin-badge",
     "platforms": [
@@ -40,7 +43,6 @@
       "windows"
     ]
   },
-  "deprecated": false,
   "description": "Shows the count of unread messages as a badge on the app icon.",
   "engines": [
     {

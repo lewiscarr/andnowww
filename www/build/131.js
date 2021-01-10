@@ -1,6 +1,6 @@
 webpackJsonp([131],{
 
-/***/ 2152:
+/***/ 2011:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,9 +9,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__conversation_info__ = __webpack_require__(2308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__conversation_info__ = __webpack_require__(2167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,14 +60,14 @@ var AddonMessagesConversationInfoPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2308:
+/***/ 2167:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonMessagesConversationInfoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_messages__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_messages__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -198,7 +198,7 @@ var AddonMessagesConversationInfoPage = /** @class */ (function () {
     };
     AddonMessagesConversationInfoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-messages-conversation-info',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/messages/pages/conversation-info/conversation-info.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.messages.groupinfo\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="loaded">\n        <ion-item text-center *ngIf="conversation">\n            <div class="item-avatar-center">\n                <img class="avatar" [src]="conversation.imageurl" core-external-content [alt]="conversation.name" role="presentation" onError="this.src=\'assets/img/group-avatar.png\'">\n            </div>\n            <h2><core-format-text [text]="conversation.name" contextLevel="system" [contextInstanceId]="0"></core-format-text></h2>\n            <p><core-format-text *ngIf="conversation.subname" [text]="conversation.subname" contextLevel="system" [contextInstanceId]="0"></core-format-text></p>\n            <p>{{ \'addon.messages.numparticipants\' | translate:{$a: conversation.membercount} }}</p>\n        </ion-item>\n\n        <a ion-item text-wrap *ngFor="let member of members" (click)="closeModal(member.id)" class="addon-messages-conversation-item">\n            <ion-avatar core-user-avatar [user]="member" [linkProfile]="false" [checkOnline]="member.showonlinestatus" item-start></ion-avatar>\n            <h2>\n                {{ member.fullname }}\n                <core-icon name="fa-ban" *ngIf="member.isblocked" [label]="\'addon.messages.contactblocked\' | translate"></core-icon>\n            </h2>\n        </a>\n\n        <core-infinite-loading [enabled]="canLoadMore" (action)="loadMoreMembers($event)" [error]="loadMoreError"></core-infinite-loading>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/messages/pages/conversation-info/conversation-info.html"*/,
+            selector: 'page-addon-messages-conversation-info',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/messages/pages/conversation-info/conversation-info.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.messages.groupinfo\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="loaded">\n        <ion-item text-center *ngIf="conversation">\n            <div class="item-avatar-center">\n                <img class="avatar" [src]="conversation.imageurl" core-external-content [alt]="conversation.name" role="presentation" onError="this.src=\'assets/img/group-avatar.png\'">\n            </div>\n            <h2><core-format-text [text]="conversation.name" contextLevel="system" [contextInstanceId]="0"></core-format-text></h2>\n            <p><core-format-text *ngIf="conversation.subname" [text]="conversation.subname" contextLevel="system" [contextInstanceId]="0"></core-format-text></p>\n            <p>{{ \'addon.messages.numparticipants\' | translate:{$a: conversation.membercount} }}</p>\n        </ion-item>\n\n        <a ion-item text-wrap *ngFor="let member of members" (click)="closeModal(member.id)" class="addon-messages-conversation-item">\n            <ion-avatar core-user-avatar [user]="member" [linkProfile]="false" [checkOnline]="member.showonlinestatus" item-start></ion-avatar>\n            <h2>\n                {{ member.fullname }}\n                <core-icon name="fa-ban" *ngIf="member.isblocked" [label]="\'addon.messages.contactblocked\' | translate"></core-icon>\n            </h2>\n        </a>\n\n        <core-infinite-loading [enabled]="canLoadMore" (action)="loadMoreMembers($event)" [error]="loadMoreError"></core-infinite-loading>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/messages/pages/conversation-info/conversation-info.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_messages__["a" /* AddonMessagesProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["b" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["b" /* CoreSitesProvider */]])

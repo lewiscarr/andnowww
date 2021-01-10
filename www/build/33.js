@@ -1,6 +1,6 @@
 webpackJsonp([33],{
 
-/***/ 2258:
+/***/ 2117:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,9 +9,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__more__ = __webpack_require__(2418);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__more__ = __webpack_require__(2277);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,7 +60,7 @@ var CoreMainMenuPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2418:
+/***/ 2277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69,13 +69,13 @@ var CoreMainMenuPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_urlschemes__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_urlschemes__ = __webpack_require__(232);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_utils__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_delegate__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_mainmenu__ = __webpack_require__(484);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_login_providers_helper__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_contentlinks_providers_helper__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_delegate__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_mainmenu__ = __webpack_require__(437);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_login_providers_helper__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_contentlinks_providers_helper__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ngx_translate_core__ = __webpack_require__(1);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
@@ -258,14 +258,14 @@ var CoreMainMenuMorePage = /** @class */ (function () {
     };
     CoreMainMenuMorePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-mainmenu-more',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/mainmenu/pages/more/more.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="siteName" contextLevel="system" [contextInstanceId]="0"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <a ion-item core-user-link [userId]="siteInfo.userid" text-wrap>\n            <ion-avatar core-user-avatar [user]="siteInfo" item-start></ion-avatar>\n            <h2>{{siteInfo.fullname}}</h2>\n            <ion-note class="core-note-block"><core-format-text [text]="siteName" contextLevel="system" [contextInstanceId]="0" [wsNotFiltered]="true"></core-format-text></ion-note>\n            <ion-note class="core-note-block">{{ siteUrl }}</ion-note>\n        </a>\n        <ion-item-divider></ion-item-divider>\n        <ion-item text-center *ngIf="(!handlers || !handlers.length) && !handlersLoaded">\n            <ion-spinner></ion-spinner>\n        </ion-item>\n        <a ion-item *ngFor="let handler of handlers" [ngClass]="[\'core-moremenu-handler\', handler.class || \'\']" (click)="openHandler(handler)" title="{{ handler.title | translate }}" detail-push>\n            <core-icon [name]="handler.icon" item-start></core-icon>\n            <h2>{{ handler.title | translate}}</h2>\n            <ion-badge item-end *ngIf="handler.showBadge" [hidden]="handler.loading || !handler.badge">{{handler.badge}}</ion-badge>\n            <ion-spinner item-end *ngIf="handler.showBadge && handler.loading"></ion-spinner>\n        </a>\n        <div *ngFor="let item of customItems" class="core-moremenu-customitem">\n            <a ion-item *ngIf="item.type != \'embedded\'" [href]="item.url" core-link [capture]="item.type == \'app\'" [inApp]="item.type == \'inappbrowser\'" title="{{item.label}}">\n                <core-icon [name]="item.icon" item-start></core-icon>\n                <h2>{{item.label}}</h2>\n            </a>\n            <a ion-item *ngIf="item.type == \'embedded\'" (click)="openItem(item)" title="{{item.label}}">\n                <core-icon [name]="item.icon" item-start></core-icon>\n                <h2>{{item.label}}</h2>\n            </a>\n        </div>\n        <a ion-item *ngIf="showScanQR" (click)="scanQR()">\n            <core-icon name="fa-qrcode" item-start aria-hidden="true"></core-icon>\n            <h2>{{ \'core.scanqr\' | translate }}</h2>\n        </a>\n        <a *ngIf="showWeb" ion-item [href]="siteInfo.siteurl" core-link autoLogin="yes" title="{{ \'core.mainmenu.website\' | translate }}">\n            <ion-icon name="globe" item-start aria-hidden="true"></ion-icon>\n            <h2>{{ \'core.mainmenu.website\' | translate }}</h2>\n        </a>\n        <a *ngIf="showHelp" ion-item [href]="docsUrl" core-link autoLogin="no" title="{{ \'core.mainmenu.help\' | translate }}">\n            <ion-icon name="help-buoy" item-start aria-hidden="true"></ion-icon>\n            <h2>{{ \'core.mainmenu.help\' | translate }}</h2>\n        </a>\n        <a ion-item (click)="openSitePreferences()" title="{{ \'core.settings.preferences\' | translate }}">\n            <core-icon name="fa-wrench" item-start></core-icon>\n            <h2>{{ \'core.settings.preferences\' | translate }}</h2>\n        </a>\n                <a ion-item (click)="logout()" title="{{ logoutLabel | translate }}">\n            <ion-icon name="log-out" item-start aria-hidden="true"></ion-icon>\n            <h2>{{ logoutLabel | translate }}</h2>\n        </a>\n        <ion-item-divider></ion-item-divider>\n        <a ion-item (click)="openAppSettings()" title="{{ \'core.settings.appsettings\' | translate }}">\n            <core-icon name="fa-cogs" item-start></core-icon>\n            <h2>{{ \'core.settings.appsettings\' | translate }}</h2>\n        </a>\n\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/mainmenu/pages/more/more.html"*/,
+            selector: 'page-core-mainmenu-more',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/mainmenu/pages/more/more.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="siteName" contextLevel="system" [contextInstanceId]="0"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <a ion-item core-user-link [userId]="siteInfo.userid" text-wrap>\n            <ion-avatar core-user-avatar [user]="siteInfo" item-start></ion-avatar>\n            <h2>{{siteInfo.fullname}}</h2>\n            <ion-note class="core-note-block"><core-format-text [text]="siteName" contextLevel="system" [contextInstanceId]="0" [wsNotFiltered]="true"></core-format-text></ion-note>\n            <ion-note class="core-note-block">{{ siteUrl }}</ion-note>\n        </a>\n        <ion-item-divider></ion-item-divider>\n        <ion-item text-center *ngIf="(!handlers || !handlers.length) && !handlersLoaded">\n            <ion-spinner></ion-spinner>\n        </ion-item>\n        <a ion-item *ngFor="let handler of handlers" [ngClass]="[\'core-moremenu-handler\', handler.class || \'\']" (click)="openHandler(handler)" title="{{ handler.title | translate }}" detail-push>\n            <core-icon [name]="handler.icon" item-start></core-icon>\n            <h2>{{ handler.title | translate}}</h2>\n            <ion-badge item-end *ngIf="handler.showBadge" [hidden]="handler.loading || !handler.badge">{{handler.badge}}</ion-badge>\n            <ion-spinner item-end *ngIf="handler.showBadge && handler.loading"></ion-spinner>\n        </a>\n        <div *ngFor="let item of customItems" class="core-moremenu-customitem">\n            <a ion-item *ngIf="item.type != \'embedded\'" [href]="item.url" core-link [capture]="item.type == \'app\'" [inApp]="item.type == \'inappbrowser\'" title="{{item.label}}">\n                <core-icon [name]="item.icon" item-start></core-icon>\n                <h2>{{item.label}}</h2>\n            </a>\n            <a ion-item *ngIf="item.type == \'embedded\'" (click)="openItem(item)" title="{{item.label}}">\n                <core-icon [name]="item.icon" item-start></core-icon>\n                <h2>{{item.label}}</h2>\n            </a>\n        </div>\n        <a ion-item *ngIf="showScanQR" (click)="scanQR()">\n            <core-icon name="fa-qrcode" item-start aria-hidden="true"></core-icon>\n            <h2>{{ \'core.scanqr\' | translate }}</h2>\n        </a>\n        <a *ngIf="showWeb" ion-item [href]="siteInfo.siteurl" core-link autoLogin="yes" title="{{ \'core.mainmenu.website\' | translate }}">\n            <ion-icon name="globe" item-start aria-hidden="true"></ion-icon>\n            <h2>{{ \'core.mainmenu.website\' | translate }}</h2>\n        </a>\n        <a *ngIf="showHelp" ion-item [href]="docsUrl" core-link autoLogin="no" title="{{ \'core.mainmenu.help\' | translate }}">\n            <ion-icon name="help-buoy" item-start aria-hidden="true"></ion-icon>\n            <h2>{{ \'core.mainmenu.help\' | translate }}</h2>\n        </a>\n        <a ion-item (click)="openSitePreferences()" title="{{ \'core.settings.preferences\' | translate }}">\n            <core-icon name="fa-wrench" item-start></core-icon>\n            <h2>{{ \'core.settings.preferences\' | translate }}</h2>\n        </a>\n                <a ion-item (click)="logout()" title="{{ logoutLabel | translate }}">\n            <ion-icon name="log-out" item-start aria-hidden="true"></ion-icon>\n            <h2>{{ logoutLabel | translate }}</h2>\n        </a>\n        <ion-item-divider></ion-item-divider>\n        <a ion-item (click)="openAppSettings()" title="{{ \'core.settings.appsettings\' | translate }}">\n            <core-icon name="fa-cogs" item-start></core-icon>\n            <h2>{{ \'core.settings.appsettings\' | translate }}</h2>\n        </a>\n\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/mainmenu/pages/more/more.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__providers_delegate__["a" /* CoreMainMenuDelegate */],
             __WEBPACK_IMPORTED_MODULE_3__providers_sites__["b" /* CoreSitesProvider */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_8__providers_mainmenu__["a" /* CoreMainMenuProvider */],
             __WEBPACK_IMPORTED_MODULE_2__providers_events__["b" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__core_login_providers_helper__["a" /* CoreLoginHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_9__core_login_providers_helper__["b" /* CoreLoginHelperProvider */],
             __WEBPACK_IMPORTED_MODULE_6__providers_utils_utils__["b" /* CoreUtilsProvider */],
             __WEBPACK_IMPORTED_MODULE_10__core_contentlinks_providers_helper__["b" /* CoreContentLinksHelperProvider */],
             __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__["b" /* CoreTextUtilsProvider */],

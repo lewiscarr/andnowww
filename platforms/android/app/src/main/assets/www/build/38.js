@@ -1,6 +1,6 @@
 webpackJsonp([38],{
 
-/***/ 2252:
+/***/ 2110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,9 +8,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSiteHelpPageModule", function() { return CoreLoginSiteHelpPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_help__ = __webpack_require__(2412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_help__ = __webpack_require__(2270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -57,7 +57,7 @@ var CoreLoginSiteHelpPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2412:
+/***/ 2270:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66,7 +66,7 @@ var CoreLoginSiteHelpPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_utils__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(88);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -103,8 +103,8 @@ var CoreLoginSiteHelpPage = /** @class */ (function () {
         this.translate = translate;
         this.utils = utils;
         this.canScanQR = this.utils.canScanQR();
-        this.urlImageHtml = __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* CoreLoginHelperProvider */].FAQ_URL_IMAGE_HTML;
-        this.qrCodeImageHtml = __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* CoreLoginHelperProvider */].FAQ_QRCODE_IMAGE_HTML;
+        this.urlImageHtml = __WEBPACK_IMPORTED_MODULE_4__providers_helper__["b" /* CoreLoginHelperProvider */].FAQ_URL_IMAGE_HTML;
+        this.qrCodeImageHtml = __WEBPACK_IMPORTED_MODULE_4__providers_helper__["b" /* CoreLoginHelperProvider */].FAQ_QRCODE_IMAGE_HTML;
         this.setupLinkHtml = '<a href="https://moodle.com/getstarted/" title="' +
             this.translate.instant('core.login.faqsetupsitelinktitle') + '">https://moodle.com/getstarted/</a>';
     }
@@ -116,7 +116,7 @@ var CoreLoginSiteHelpPage = /** @class */ (function () {
     };
     CoreLoginSiteHelpPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-site-help',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/login/pages/site-help/site-help.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.login.help\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeHelp()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <ion-list>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqcannotfindmysitequestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap>\n            <p>{{ \'core.login.faqcannotfindmysiteanswer\' | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqwhatisurlquestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap class="core-login-faqwhatisurlanswer">\n            <div [innerHTML]="\'core.login.faqwhatisurlanswer\' | translate: {$image: urlImageHtml}">\n            </div>\n        </ion-item>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqcannotconnectquestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap>\n            <p>{{ \'core.login.faqcannotconnectanswer\' | translate }} {{ \'core.whoissiteadmin\' | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqsetupsitequestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap>\n            <p><core-format-text [text]="\'core.login.faqsetupsiteanswer\' | translate:{$link: setupLinkHtml}" [filter]="false"></core-format-text></p>\n        </ion-item>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqtestappquestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap>\n            <p>{{ \'core.login.faqtestappanswer\' | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="canScanQR">\n            <h2><b>{{ \'core.login.faqwhereisqrcode\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap *ngIf="canScanQR" class="core-login-faqwhereisqrcodeanswer">\n            <div [innerHTML]="\'core.login.faqwhereisqrcodeanswer\' | translate: {$image: qrCodeImageHtml}">\n            </div>\n        </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/login/pages/site-help/site-help.html"*/,
+            selector: 'page-core-login-site-help',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/login/pages/site-help/site-help.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.login.help\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeHelp()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <ion-list>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqcannotfindmysitequestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap>\n            <p>{{ \'core.login.faqcannotfindmysiteanswer\' | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqwhatisurlquestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap class="core-login-faqwhatisurlanswer">\n            <div [innerHTML]="\'core.login.faqwhatisurlanswer\' | translate: {$image: urlImageHtml}">\n            </div>\n        </ion-item>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqcannotconnectquestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap>\n            <p>{{ \'core.login.faqcannotconnectanswer\' | translate }} {{ \'core.whoissiteadmin\' | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqsetupsitequestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap>\n            <p><core-format-text [text]="\'core.login.faqsetupsiteanswer\' | translate:{$link: setupLinkHtml}" [filter]="false"></core-format-text></p>\n        </ion-item>\n        <ion-item text-wrap>\n            <h2><b>{{ \'core.login.faqtestappquestion\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap>\n            <p>{{ \'core.login.faqtestappanswer\' | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="canScanQR">\n            <h2><b>{{ \'core.login.faqwhereisqrcode\' | translate }}</b></h2>\n        </ion-item>\n        <ion-item text-wrap *ngIf="canScanQR" class="core-login-faqwhereisqrcodeanswer">\n            <div [innerHTML]="\'core.login.faqwhereisqrcodeanswer\' | translate: {$image: qrCodeImageHtml}">\n            </div>\n        </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/login/pages/site-help/site-help.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */],
             __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],

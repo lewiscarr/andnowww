@@ -1,6 +1,6 @@
 webpackJsonp([28],{
 
-/***/ 2264:
+/***/ 2123:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,9 +9,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__general__ = __webpack_require__(2424);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__general__ = __webpack_require__(2283);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,23 +60,23 @@ var CoreSettingsGeneralPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2424:
+/***/ 2283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSettingsGeneralPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_constants__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_constants__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_config__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_file__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_config__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_file__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_events__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_lang__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_lang__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_pushnotifications_providers_pushnotifications__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__configconstants__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_helper__ = __webpack_require__(1073);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_pushnotifications_providers_pushnotifications__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__configconstants__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_helper__ = __webpack_require__(1003);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -244,7 +244,7 @@ var CoreSettingsGeneralPage = /** @class */ (function () {
     ], CoreSettingsGeneralPage.prototype, "segment", void 0);
     CoreSettingsGeneralPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-settings-general',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/settings/pages/general/general.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.settings.general\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-item text-wrap>\n        <ion-label><h2>{{ \'core.settings.language\' | translate }}</h2></ion-label>\n        <ion-select [(ngModel)]="selectedLanguage" (ngModelChange)="languageChanged()" interface="action-sheet">\n            <ion-option *ngFor="let entry of languages" [value]="entry.code">{{ entry.name }}</ion-option>\n        </ion-select>\n    </ion-item>\n    <ion-item text-wrap class="core-settings-general-font-size">\n        <ion-label><h2>{{ \'core.settings.fontsize\' | translate }}</h2></ion-label>\n        <ion-segment [(ngModel)]="selectedFontSize" (ngModelChange)="fontSizeChanged()" color="primary" item-content>\n            <ion-segment-button *ngFor="let fontSize of fontSizes" value="{{ fontSize.size }}" [ngStyle]="{\'font-size.px\': fontSize.style}">\n                {{ \'core.settings.fontsizecharacter\' | translate }}<!--\n                Empty element styled with the largest font size, so all buttons share a common baseline.\n                --><span [ngStyle]="{\'font-size.px\': fontSizes[fontSizes.length - 1].style}"></span>\n            </ion-segment-button>\n        </ion-segment>\n    </ion-item>\n    <ion-item text-wrap class="core-settings-general-color-scheme" *ngIf="colorSchemes.length > 0" [attr.no-lines]="selectedScheme==\'auto\' && isAndroid ? true : null">\n        <ion-label>\n            <h2>{{ \'core.settings.colorscheme\' | translate }}</h2>\n            <p *ngIf="colorSchemeDisabled" class="text-danger">{{ \'core.settings.forcedsetting\' | translate }}</p>\n        </ion-label>\n        <ion-select [(ngModel)]="selectedScheme" (ngModelChange)="colorSchemeChanged()" interface="action-sheet" [disabled]="colorSchemeDisabled">\n            <ion-option *ngFor="let scheme of colorSchemes" [value]="scheme">{{ \'core.settings.colorscheme-\' + scheme | translate }}</ion-option>\n        </ion-select>\n    </ion-item>\n    <ion-item text-wrap *ngIf="colorSchemes.length > 0 && selectedScheme==\'auto\' && isAndroid">\n        <p class="text-danger">{{ \'core.settings.colorscheme-auto-notice\' | translate }}</p>\n    </ion-item>\n    <ion-item text-wrap *ngIf="rteSupported">\n        <ion-label>\n            <h2>{{ \'core.settings.enablerichtexteditor\' | translate }}</h2>\n            <p>{{ \'core.settings.enablerichtexteditordescription\' | translate }}</p>\n        </ion-label>\n        <ion-toggle [(ngModel)]="richTextEditor" (ngModelChange)="richTextEditorChanged()"></ion-toggle>\n    </ion-item>\n    <ion-item text-wrap>\n        <ion-label>\n            <h2>{{ \'core.settings.debugdisplay\' | translate }}</h2>\n            <p>{{ \'core.settings.debugdisplaydescription\' | translate }}</p>\n        </ion-label>\n        <ion-toggle [(ngModel)]="debugDisplay" (ngModelChange)="debugDisplayChanged()"></ion-toggle>\n    </ion-item>\n    <ion-item text-wrap *ngIf="analyticsSupported">\n        <ion-label>\n            <h2>{{ \'core.settings.enablefirebaseanalytics\' | translate }}</h2>\n            <p>{{ \'core.settings.enablefirebaseanalyticsdescription\' | translate }}</p>\n        </ion-label>\n        <ion-toggle [(ngModel)]="analyticsEnabled" (ngModelChange)="analyticsEnabledChanged()"></ion-toggle>\n    </ion-item>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/settings/pages/general/general.html"*/,
+            selector: 'page-core-settings-general',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/settings/pages/general/general.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.settings.general\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-item text-wrap>\n        <ion-label><h2>{{ \'core.settings.language\' | translate }}</h2></ion-label>\n        <ion-select [(ngModel)]="selectedLanguage" (ngModelChange)="languageChanged()" interface="action-sheet">\n            <ion-option *ngFor="let entry of languages" [value]="entry.code">{{ entry.name }}</ion-option>\n        </ion-select>\n    </ion-item>\n    <ion-item text-wrap class="core-settings-general-font-size">\n        <ion-label><h2>{{ \'core.settings.fontsize\' | translate }}</h2></ion-label>\n        <ion-segment [(ngModel)]="selectedFontSize" (ngModelChange)="fontSizeChanged()" color="primary" item-content>\n            <ion-segment-button *ngFor="let fontSize of fontSizes" value="{{ fontSize.size }}" [ngStyle]="{\'font-size.px\': fontSize.style}">\n                {{ \'core.settings.fontsizecharacter\' | translate }}<!--\n                Empty element styled with the largest font size, so all buttons share a common baseline.\n                --><span [ngStyle]="{\'font-size.px\': fontSizes[fontSizes.length - 1].style}"></span>\n            </ion-segment-button>\n        </ion-segment>\n    </ion-item>\n    <ion-item text-wrap class="core-settings-general-color-scheme" *ngIf="colorSchemes.length > 0" [attr.no-lines]="selectedScheme==\'auto\' && isAndroid ? true : null">\n        <ion-label>\n            <h2>{{ \'core.settings.colorscheme\' | translate }}</h2>\n            <p *ngIf="colorSchemeDisabled" class="text-danger">{{ \'core.settings.forcedsetting\' | translate }}</p>\n        </ion-label>\n        <ion-select [(ngModel)]="selectedScheme" (ngModelChange)="colorSchemeChanged()" interface="action-sheet" [disabled]="colorSchemeDisabled">\n            <ion-option *ngFor="let scheme of colorSchemes" [value]="scheme">{{ \'core.settings.colorscheme-\' + scheme | translate }}</ion-option>\n        </ion-select>\n    </ion-item>\n    <ion-item text-wrap *ngIf="colorSchemes.length > 0 && selectedScheme==\'auto\' && isAndroid">\n        <p class="text-danger">{{ \'core.settings.colorscheme-auto-notice\' | translate }}</p>\n    </ion-item>\n    <ion-item text-wrap *ngIf="rteSupported">\n        <ion-label>\n            <h2>{{ \'core.settings.enablerichtexteditor\' | translate }}</h2>\n            <p>{{ \'core.settings.enablerichtexteditordescription\' | translate }}</p>\n        </ion-label>\n        <ion-toggle [(ngModel)]="richTextEditor" (ngModelChange)="richTextEditorChanged()"></ion-toggle>\n    </ion-item>\n    <ion-item text-wrap>\n        <ion-label>\n            <h2>{{ \'core.settings.debugdisplay\' | translate }}</h2>\n            <p>{{ \'core.settings.debugdisplaydescription\' | translate }}</p>\n        </ion-label>\n        <ion-toggle [(ngModel)]="debugDisplay" (ngModelChange)="debugDisplayChanged()"></ion-toggle>\n    </ion-item>\n    <ion-item text-wrap *ngIf="analyticsSupported">\n        <ion-label>\n            <h2>{{ \'core.settings.enablefirebaseanalytics\' | translate }}</h2>\n            <p>{{ \'core.settings.enablefirebaseanalyticsdescription\' | translate }}</p>\n        </ion-label>\n        <ion-toggle [(ngModel)]="analyticsEnabled" (ngModelChange)="analyticsEnabledChanged()"></ion-toggle>\n    </ion-item>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/settings/pages/general/general.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_config__["b" /* CoreConfigProvider */],
             __WEBPACK_IMPORTED_MODULE_5__providers_file__["b" /* CoreFileProvider */],

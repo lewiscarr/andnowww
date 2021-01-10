@@ -1,6 +1,6 @@
 webpackJsonp([32],{
 
-/***/ 2259:
+/***/ 2119:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,10 +9,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ratings__ = __webpack_require__(2419);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ratings__ = __webpack_require__(2279);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(66);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ var CoreRatingRatingsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2419:
+/***/ 2279:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71,7 +71,7 @@ var CoreRatingRatingsPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_rating_providers_rating__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_rating_providers_rating__ = __webpack_require__(162);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -160,7 +160,7 @@ var CoreRatingRatingsPage = /** @class */ (function () {
     };
     CoreRatingRatingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-rating-ratings',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/rating/pages/ratings/ratings.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.rating.ratings\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshRatings($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <ion-list *ngIf="ratings.length > 0">\n            <ion-item text-wrap *ngFor="let rating of ratings">\n                <ion-avatar core-user-avatar [user]="rating" [courseId]="courseId" item-start></ion-avatar>\n                <ion-note item-end padding-left *ngIf="rating.timemodified">\n                    {{ rating.timemodified | coreDateDayOrTime }}\n                </ion-note>\n                <h2>{{ rating.userfullname }}</h2>\n                <p>{{ rating.rating }}</p>\n            </ion-item>\n        </ion-list>\n        <core-empty-box *ngIf="ratings.length == 0" icon="stats" [message]="\'core.rating.noratings\' | translate"></core-empty-box>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/rating/pages/ratings/ratings.html"*/,
+            selector: 'page-core-rating-ratings',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/rating/pages/ratings/ratings.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.rating.ratings\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshRatings($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <ion-list *ngIf="ratings.length > 0">\n            <ion-item text-wrap *ngFor="let rating of ratings">\n                <ion-avatar core-user-avatar [user]="rating" [courseId]="courseId" item-start></ion-avatar>\n                <ion-note item-end padding-left *ngIf="rating.timemodified">\n                    {{ rating.timemodified | coreDateDayOrTime }}\n                </ion-note>\n                <h2>{{ rating.userfullname }}</h2>\n                <p>{{ rating.rating }}</p>\n            </ion-item>\n        </ion-list>\n        <core-empty-box *ngIf="ratings.length == 0" icon="stats" [message]="\'core.rating.noratings\' | translate"></core-empty-box>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/rating/pages/ratings/ratings.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__["b" /* CoreDomUtilsProvider */],
             __WEBPACK_IMPORTED_MODULE_3__core_rating_providers_rating__["a" /* CoreRatingProvider */]])

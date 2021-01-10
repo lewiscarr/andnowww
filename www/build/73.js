@@ -1,6 +1,6 @@
 webpackJsonp([73],{
 
-/***/ 2215:
+/***/ 2074:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,8 +10,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__map__ = __webpack_require__(2373);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__map__ = __webpack_require__(2232);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,7 +60,7 @@ var AddonModWikiMapPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2373:
+/***/ 2232:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -151,7 +151,7 @@ var AddonModWikiMapPage = /** @class */ (function () {
     };
     AddonModWikiMapPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-wiki-map',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/wiki/pages/map/map.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_wiki.map\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <nav>\n        <ion-list>\n            <!-- Go to "home". -->\n            <a ion-item text-wrap *ngIf="homeView" (click)="goToWikiHome()">\n                <ion-icon name="home" item-start></ion-icon> {{ \'addon.mod_wiki.gowikihome\' | translate }}\n            </a>\n            <ng-container *ngFor="let letter of map">\n                <ion-item-divider *ngIf="letter.label">\n                    {{ letter.label }}\n                </ion-item-divider>\n                <a ion-item text-wrap *ngFor="let page of letter.pages" (click)="goToPage(page)" [class.core-nav-item-selected]="selected == page.id">\n                    <ion-icon name="home" item-start *ngIf="page.firstpage"></ion-icon> <core-format-text [text]="page.title" contextLevel="module" [contextInstanceId]="moduleId" [courseId]="courseId"></core-format-text>\n                    <ion-note *ngIf="!page.id" item-end>\n                        <ion-icon name="time"></ion-icon>\n                        <span text-wrap>{{ \'core.notsent\' | translate }}</span>\n                    </ion-note>\n                </a>\n            </ng-container>\n        </ion-list>\n    </nav>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/wiki/pages/map/map.html"*/,
+            selector: 'page-addon-mod-wiki-map',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/wiki/pages/map/map.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_wiki.map\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <nav>\n        <ion-list>\n            <!-- Go to "home". -->\n            <a ion-item text-wrap *ngIf="homeView" (click)="goToWikiHome()">\n                <ion-icon name="home" item-start></ion-icon> {{ \'addon.mod_wiki.gowikihome\' | translate }}\n            </a>\n            <ng-container *ngFor="let letter of map">\n                <ion-item-divider *ngIf="letter.label">\n                    {{ letter.label }}\n                </ion-item-divider>\n                <a ion-item text-wrap *ngFor="let page of letter.pages" (click)="goToPage(page)" [class.core-nav-item-selected]="selected == page.id">\n                    <ion-icon name="home" item-start *ngIf="page.firstpage"></ion-icon> <core-format-text [text]="page.title" contextLevel="module" [contextInstanceId]="moduleId" [courseId]="courseId"></core-format-text>\n                    <ion-note *ngIf="!page.id" item-end>\n                        <ion-icon name="time"></ion-icon>\n                        <span text-wrap>{{ \'core.notsent\' | translate }}</span>\n                    </ion-note>\n                </a>\n            </ng-container>\n        </ion-list>\n    </nav>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/wiki/pages/map/map.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */]])
     ], AddonModWikiMapPage);

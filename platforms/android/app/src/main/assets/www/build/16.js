@@ -1,6 +1,6 @@
 webpackJsonp([16],{
 
-/***/ 2275:
+/***/ 2135:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,10 +9,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__search__ = __webpack_require__(2435);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__search__ = __webpack_require__(2295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_search_components_components_module__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_search_components_components_module__ = __webpack_require__(230);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ var CoreTagSerchPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2435:
+/***/ 2295:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75,8 +75,8 @@ var CoreTagSerchPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_utils__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_contentlinks_providers_helper__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_tag_providers_tag__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_contentlinks_providers_helper__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_tag_providers_tag__ = __webpack_require__(131);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -214,7 +214,7 @@ var CoreTagSearchPage = /** @class */ (function () {
     };
     CoreTagSearchPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-tag-search',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/core/tag/pages/search/search.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.tag.searchtags\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <ion-grid class="safe-area-page">\n        <ion-row>\n            <ion-col col-12 [attr.col-sm-6]="collections && collections.length > 1 ? \'\' : null">\n                <core-search-box (onSubmit)="searchTags($event)" (onClear)="searchTags(\'\')" [initialSearch]="query" [disabled]="searching" autocorrect="off" [spellcheck]="false" [autoFocus]="false" [lengthCheck]="0" searchArea="CoreTag"></core-search-box>\n            </ion-col>\n            <ion-col col-12 col-sm-6 *ngIf="collections && collections.length > 1">\n                <ion-select text-start [(ngModel)]="collectionId" (ngModelChange)="searchTags(query)" [disabled]="searching" interface="popover" class="core-button-select">\n                    <ion-option [value]="0">{{ \'core.tag.inalltagcoll\' | translate }}</ion-option>\n                    <ion-option *ngFor="let collection of collections" [value]="collection.id">{{ collection.name }}</ion-option>\n                </ion-select>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n    <core-loading [hideUntil]="loaded && !searching" class="safe-area-page">\n        <core-empty-box *ngIf="!cloud || !cloud.tags || !cloud.tags.length" icon="pricetags" [message]="\'core.tag.notagsfound\' | translate: {$a: query}"></core-empty-box>\n\n        <ng-container *ngIf="cloud && cloud.tags && cloud.tags.length > 0">\n            <div text-center class="core-tag-cloud">\n                <ion-badge *ngFor="let tag of cloud.tags" (click)="openTag(tag)" text-wrap>\n                   <span [class]="\'size\' + tag.size" >{{ tag.name }}</span>\n                </ion-badge>\n            </div>\n            <p *ngIf="cloud.tags.length < cloud.totalcount" text-center>\n                {{ \'core.tag.showingfirsttags\' | translate: {$a: cloud.tags.length} }}\n            </p>\n        </ng-container>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/core/tag/pages/search/search.html"*/,
+            selector: 'page-core-tag-search',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/core/tag/pages/search/search.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.tag.searchtags\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <ion-grid class="safe-area-page">\n        <ion-row>\n            <ion-col col-12 [attr.col-sm-6]="collections && collections.length > 1 ? \'\' : null">\n                <core-search-box (onSubmit)="searchTags($event)" (onClear)="searchTags(\'\')" [initialSearch]="query" [disabled]="searching" autocorrect="off" [spellcheck]="false" [autoFocus]="false" [lengthCheck]="0" searchArea="CoreTag"></core-search-box>\n            </ion-col>\n            <ion-col col-12 col-sm-6 *ngIf="collections && collections.length > 1">\n                <ion-select text-start [(ngModel)]="collectionId" (ngModelChange)="searchTags(query)" [disabled]="searching" interface="popover" class="core-button-select">\n                    <ion-option [value]="0">{{ \'core.tag.inalltagcoll\' | translate }}</ion-option>\n                    <ion-option *ngFor="let collection of collections" [value]="collection.id">{{ collection.name }}</ion-option>\n                </ion-select>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n    <core-loading [hideUntil]="loaded && !searching" class="safe-area-page">\n        <core-empty-box *ngIf="!cloud || !cloud.tags || !cloud.tags.length" icon="pricetags" [message]="\'core.tag.notagsfound\' | translate: {$a: query}"></core-empty-box>\n\n        <ng-container *ngIf="cloud && cloud.tags && cloud.tags.length > 0">\n            <div text-center class="core-tag-cloud">\n                <ion-badge *ngFor="let tag of cloud.tags" (click)="openTag(tag)" text-wrap>\n                   <span [class]="\'size\' + tag.size" >{{ tag.name }}</span>\n                </ion-badge>\n            </div>\n            <p *ngIf="cloud.tags.length < cloud.totalcount" text-center>\n                {{ \'core.tag.showingfirsttags\' | translate: {$a: cloud.tags.length} }}\n            </p>\n        </ng-container>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/core/tag/pages/search/search.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["b" /* CoreAppProvider */],
             __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["b" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_utils__["b" /* CoreUtilsProvider */],

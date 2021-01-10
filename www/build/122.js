@@ -1,6 +1,6 @@
 webpackJsonp([122],{
 
-/***/ 2164:
+/***/ 2021:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,8 +9,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__toc__ = __webpack_require__(2320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__toc__ = __webpack_require__(2177);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -57,7 +57,7 @@ var AddonModBookTocPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2320:
+/***/ 2177:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -124,7 +124,7 @@ var AddonModBookTocPage = /** @class */ (function () {
     };
     AddonModBookTocPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-book-toc',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/book/pages/toc/toc.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_book.toc\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <nav>\n        <ion-list>\n            <a ion-item text-wrap *ngFor="let chapter of chapters" (click)="loadChapter(chapter.id)" [class.core-nav-item-selected]="selected == chapter.id" [class.item-dimmed]="chapter.hidden">\n                <p [attr.padding-left]="addPadding && chapter.level == 1 ? true : null">\n                    <span *ngIf="showNumbers" class="addon-mod-book-number">{{chapter.number}}</span>\n                    <span *ngIf="showBullets" class="addon-mod-book-bullet">&bull;</span>\n                    <core-format-text [text]="chapter.title" contextLevel="module" [contextInstanceId]="moduleId" [courseId]="courseId"></core-format-text>\n                </p>\n            </a>\n        </ion-list>\n    </nav>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/book/pages/toc/toc.html"*/
+            selector: 'page-addon-mod-book-toc',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/book/pages/toc/toc.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_book.toc\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <nav>\n        <ion-list>\n            <a ion-item text-wrap *ngFor="let chapter of chapters" (click)="loadChapter(chapter.id)" [class.core-nav-item-selected]="selected == chapter.id" [class.item-dimmed]="chapter.hidden">\n                <p [attr.padding-left]="addPadding && chapter.level == 1 ? true : null">\n                    <span *ngIf="showNumbers" class="addon-mod-book-number">{{chapter.number}}</span>\n                    <span *ngIf="showBullets" class="addon-mod-book-bullet">&bull;</span>\n                    <core-format-text [text]="chapter.title" contextLevel="module" [contextInstanceId]="moduleId" [courseId]="courseId"></core-format-text>\n                </p>\n            </a>\n        </ion-list>\n    </nav>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/book/pages/toc/toc.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["G" /* ViewController */]])
     ], AddonModBookTocPage);

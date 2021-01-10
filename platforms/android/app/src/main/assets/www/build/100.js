@@ -1,6 +1,6 @@
 webpackJsonp([100],{
 
-/***/ 2186:
+/***/ 2044:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,9 +10,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__edit__ = __webpack_require__(2342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_editor_components_components_module__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__edit__ = __webpack_require__(2200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_editor_components_components_module__ = __webpack_require__(130);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,23 +63,23 @@ var AddonModGlossaryNewDiscussionPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2342:
+/***/ 2200:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModGlossaryEditPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_fileuploader_providers_fileuploader__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_glossary__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_offline__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_helper__ = __webpack_require__(501);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_fileuploader_providers_fileuploader__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_glossary__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_offline__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_helper__ = __webpack_require__(455);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -371,7 +371,7 @@ var AddonModGlossaryEditPage = /** @class */ (function () {
     ], AddonModGlossaryEditPage.prototype, "formElement", void 0);
     AddonModGlossaryEditPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-glossary-edit',template:/*ion-inline-start:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/glossary/pages/edit/edit.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="module.name" contextLevel="module" [contextInstanceId]="module.id" [courseId]="courseId"></core-format-text></ion-title>\n        <ion-buttons end>\n            <button ion-button (click)="save()"> {{ \'core.save\' | translate }}</button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <form ion-list #editFormEl>\n            <ion-item>\n                <ion-label stacked>{{ \'addon.mod_glossary.concept\' | translate }}</ion-label>\n                <ion-input type="text" [placeholder]="\'addon.mod_glossary.concept\' | translate" [(ngModel)]="entry.concept" name="concept"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label stacked>{{ \'addon.mod_glossary.definition\' | translate }}</ion-label>\n                <core-rich-text-editor item-content [control]="definitionControl" (contentChanged)="onDefinitionChange($event)" [placeholder]="\'addon.mod_glossary.definition\' | translate" name="addon_mod_glossary_edit" [component]="component" [componentId]="glossary.cmid" [autoSave]="true" contextLevel="module" [contextInstanceId]="module.id" elementId="definition_editor" [draftExtraParams]="editorExtraParams"></core-rich-text-editor>\n            </ion-item>\n            <ion-item *ngIf="categories.length > 0">\n                <ion-label stacked id="addon-mod-glossary-categories-label">{{ \'addon.mod_glossary.categories\' | translate }}</ion-label>\n                <ion-select [(ngModel)]="options.categories" multiple="true" aria-labelledby="addon-mod-glossary-categories-label" interface="action-sheet" [placeholder]="\'addon.mod_glossary.categories\' | translate" name="categories">\n                    <ion-option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</ion-option>\n                </ion-select>\n            </ion-item>\n            <ion-item>\n                <ion-label stacked id="addon-mod-glossary-aliases-label">{{ \'addon.mod_glossary.aliases\' | translate }}</ion-label>\n                <ion-textarea [(ngModel)]="options.aliases" rows="1" core-auto-rows aria-labelledby="addon-mod-glossary-aliases-label" name="aliases"></ion-textarea>\n            </ion-item>\n            <ion-item-divider>{{ \'addon.mod_glossary.attachment\' | translate }}</ion-item-divider>\n            <core-attachments [files]="attachments" [component]="component" [componentId]="glossary.cmid" [allowOffline]="true"></core-attachments>\n            <ng-container *ngIf="glossary.usedynalink">\n                <ion-item-divider>{{ \'addon.mod_glossary.linking\' | translate }}</ion-item-divider>\n                <ion-item text-wrap>\n                    <ion-label>{{ \'addon.mod_glossary.entryusedynalink\' | translate }}</ion-label>\n                    <ion-toggle [(ngModel)]="options.usedynalink" name="usedynalink"></ion-toggle>\n                </ion-item>\n                <ion-item text-wrap>\n                    <ion-label>{{ \'addon.mod_glossary.casesensitive\' | translate }}</ion-label>\n                    <ion-toggle [disabled]="!options.usedynalink" [(ngModel)]="options.casesensitive" name="casesensitive"></ion-toggle>\n                </ion-item>\n                <ion-item text-wrap>\n                    <ion-label>{{ \'addon.mod_glossary.fullmatch\' | translate }}</ion-label>\n                    <ion-toggle [disabled]="!options.usedynalink" [(ngModel)]="options.fullmatch" name="fullmatch"></ion-toggle>\n                </ion-item>\n            </ng-container>\n        </form>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/MyApp/src/addon/mod/glossary/pages/edit/edit.html"*/,
+            selector: 'page-addon-mod-glossary-edit',template:/*ion-inline-start:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/glossary/pages/edit/edit.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="module.name" contextLevel="module" [contextInstanceId]="module.id" [courseId]="courseId"></core-format-text></ion-title>\n        <ion-buttons end>\n            <button ion-button (click)="save()"> {{ \'core.save\' | translate }}</button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <form ion-list #editFormEl>\n            <ion-item>\n                <ion-label stacked>{{ \'addon.mod_glossary.concept\' | translate }}</ion-label>\n                <ion-input type="text" [placeholder]="\'addon.mod_glossary.concept\' | translate" [(ngModel)]="entry.concept" name="concept"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label stacked>{{ \'addon.mod_glossary.definition\' | translate }}</ion-label>\n                <core-rich-text-editor item-content [control]="definitionControl" (contentChanged)="onDefinitionChange($event)" [placeholder]="\'addon.mod_glossary.definition\' | translate" name="addon_mod_glossary_edit" [component]="component" [componentId]="glossary.cmid" [autoSave]="true" contextLevel="module" [contextInstanceId]="module.id" elementId="definition_editor" [draftExtraParams]="editorExtraParams"></core-rich-text-editor>\n            </ion-item>\n            <ion-item *ngIf="categories.length > 0">\n                <ion-label stacked id="addon-mod-glossary-categories-label">{{ \'addon.mod_glossary.categories\' | translate }}</ion-label>\n                <ion-select [(ngModel)]="options.categories" multiple="true" aria-labelledby="addon-mod-glossary-categories-label" interface="action-sheet" [placeholder]="\'addon.mod_glossary.categories\' | translate" name="categories">\n                    <ion-option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</ion-option>\n                </ion-select>\n            </ion-item>\n            <ion-item>\n                <ion-label stacked id="addon-mod-glossary-aliases-label">{{ \'addon.mod_glossary.aliases\' | translate }}</ion-label>\n                <ion-textarea [(ngModel)]="options.aliases" rows="1" core-auto-rows aria-labelledby="addon-mod-glossary-aliases-label" name="aliases"></ion-textarea>\n            </ion-item>\n            <ion-item-divider>{{ \'addon.mod_glossary.attachment\' | translate }}</ion-item-divider>\n            <core-attachments [files]="attachments" [component]="component" [componentId]="glossary.cmid" [allowOffline]="true"></core-attachments>\n            <ng-container *ngIf="glossary.usedynalink">\n                <ion-item-divider>{{ \'addon.mod_glossary.linking\' | translate }}</ion-item-divider>\n                <ion-item text-wrap>\n                    <ion-label>{{ \'addon.mod_glossary.entryusedynalink\' | translate }}</ion-label>\n                    <ion-toggle [(ngModel)]="options.usedynalink" name="usedynalink"></ion-toggle>\n                </ion-item>\n                <ion-item text-wrap>\n                    <ion-label>{{ \'addon.mod_glossary.casesensitive\' | translate }}</ion-label>\n                    <ion-toggle [disabled]="!options.usedynalink" [(ngModel)]="options.casesensitive" name="casesensitive"></ion-toggle>\n                </ion-item>\n                <ion-item text-wrap>\n                    <ion-label>{{ \'addon.mod_glossary.fullmatch\' | translate }}</ion-label>\n                    <ion-toggle [disabled]="!options.usedynalink" [(ngModel)]="options.fullmatch" name="fullmatch"></ion-toggle>\n                </ion-item>\n            </ng-container>\n        </form>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/lewiscarr/Documents/moodleapp/src/addon/mod/glossary/pages/edit/edit.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["t" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["s" /* NavController */],

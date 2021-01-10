@@ -19,7 +19,7 @@
   ],
   "_resolved": "git+https://github.com/moodlemobile/phonegap-plugin-push.git#cb332d5ec8a1a0d43916fc6d35455fe6bea7a7f9",
   "_spec": "git+https://github.com/moodlemobile/phonegap-plugin-push.git#moodle-v3",
-  "_where": "/Users/lewiscarr/Documents/MyApp",
+  "_where": "/Users/lewiscarr/Documents/moodleapp",
   "author": {
     "name": "Adobe PhoneGap Team"
   },

@@ -19,7 +19,7 @@
   ],
   "_resolved": "git+https://github.com/moodlemobile/cordova-plugin-wkwebview-cookies.git#8c3a289e29b33edecff15f470c1630baf4ec3e88",
   "_spec": "git+https://github.com/moodlemobile/cordova-plugin-wkwebview-cookies.git",
-  "_where": "/Users/lewiscarr/Documents/MyApp",
+  "_where": "/Users/lewiscarr/Documents/moodleapp",
   "author": {
     "name": "Moodle Pty Ltd"
   },
